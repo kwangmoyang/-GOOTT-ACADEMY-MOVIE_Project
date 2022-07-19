@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(font/GmarketSansTTF/GmarketSansTTFLight.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans';
+    background-color: #292826;
+}
+
+#movieContainer{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movies {
+    /* border: 1px solid black; */
+    width: 30vw;
+    color: #f9d142;
+}
+
+select{
+    color: white;
+}
+
+button{
+    color: white;
+}
