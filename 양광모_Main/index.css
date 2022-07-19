@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+}
+
+:root {
+    --border: 5px solid #292826;
+    --bg-color: #292826;
+    --bg2-color: #F9D142;
+
+    --width: 100%;
+    --basic-color : white;
+    --border-sample: 3px solid red;
+}  
+
+
+/* 메뉴바 설정부 */
+.header{
+    width: var(--width);
+    height: 15vh;
+
+    border: var(--border-sample);
+    /* background-color: var(--bg-color); */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    position: fixed;
+    z-index: 100;
+    /* display: none; */
+}
+
+
+/* 헤더 버튼 설정 */
+.header>button{
+    background-color: var(--bg2-color);
+    /* border: 3px solid red; */
+    width: 6vw;
+    height: 6vh;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 40px;
+}
+.header>i{
+    margin-left: 40px;
+}
+
+/* right bar 디자인 */
+.rightBar>ul{
+    list-style-type: none;
+    position: fixed;
+    z-index: 1000;
+    top: 40vh;
+    left: 200vh;
+}
+.rightBar>ul>li{
+    width: 25px;
+    height: 25px;
+    background-color: #F9D142;
+    border: var(--border);
+    margin: 15px;
+}
+
+
+/* 섹션 공통 사이즈 */
+.section{
+    width: var(--width);
+    height: 100vh;
+
+    /* border: var(--border-sample); */
+    background-color: var(--bg-color);
+    color: var(--basic-color);
+
+    position: relative;
+
+    background-image: url(https://platum.kr/wp-content/uploads/2015/12/ceqfnmsw8aemk7w-tile-1024x725.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: saturate(70%);
+    
+}
+/* 섹션별 이미지 삽입 */
+.one{
+    background-image: url(img/2.jpg);
+}
+.two{
+    background-image: url(img/3.jpg);
+}
+.thr{
+    /* background-image: url(img/3.jpg); */
+}
+.four{
+    background-image: url(img/3.jpg);
+}
+
+/* 텍스트존 박스 설정 */
+.section>.text-zone{
+    width: 180vh;
+    text-align: center;
+    line-height: 10vh;
+
+    border: var(--border-sample);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* 텍스트 상세 사이즈 조절 */
+.section>.text-zone>h1{
+    font-size: 50px;
+}
+.section>.text-zone>p{
+    font-size: 20px;
+    line-height: 60px;
+}
+/* 아이콘 사이즈 조절 */
+.uil-arrow-circle-down{
+    font-size: 50px;
+    line-height: 100px;
+    color: var(--bg2-color);
+}
+/* 네번째 아이콘 각도 조절 */
+#icon_change{
+    transform: rotate(180deg);
+}
+
+/* 섹션버튼 */
+.section>.text-zone>button{
+    background-color: var(--bg2-color);
+    border: 0px;
+    width: 200px;
+    height: 45px;
+    cursor: pointer;
+    border: var(--border);
+
+    margin-top: 30px;
+}
