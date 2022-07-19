@@ -1,0 +1,164 @@
+[
+    {
+        "genre" : "Action/Comedy",
+        "title" : "Red Notice",
+        "open" : 2021,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Spider-Man: Homecoming",
+        "genre" : "Action/Adventure",
+        "open" : 2017,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "The Matrix Resurrections",
+        "genre" : "Sci-fi/Action",
+        "open" : 2021,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Eternals",
+        "genre" : "Adventure/Action",
+        "open" : 2021,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Dune",
+        "genre" : "Sci-fi/Adventure",
+        "open" : 2021,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "1917",
+        "genre" : "War/Drama",
+        "open" : 2019,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Shang-Chi and The Legend of The Ten Rings",
+        "genre" : "Action/Fantasy",
+        "open" : 2021,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Casino Royale",
+        "genre" : "Action/Adventure",
+        "open" : 2006,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "The Dark Knight",
+        "genre" : "Action/Adventure",
+        "open" : 2008,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Black Panther",
+        "genre" : "Action/Adventure",
+        "open" : 2018,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Venom",
+        "genre" : "Action/Adventure",
+        "open" : 2018,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Lord Of The Rings: Return Of The King",
+        "genre" : "Fantasy/Adventure",
+        "open" : 2003,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Saving Private Ryan",
+        "genre" : "War/Action",
+        "open" : 1998,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Interstellar",
+        "genre" : "Sci-fi/Adventure",
+        "open" : 2014,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Gladiator",
+        "genre" : "Action/Adventure",
+        "open" : 2000,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Avengers: Endgame",
+        "genre" : "Action/Sci-fi",
+        "open" : 2019,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Wonder Woman 1984",
+        "genre" : "Action/Adventure",
+        "open" : 2020,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    },
+    {
+        "title" : "Captain Marvel",
+        "genre" : "Action/Sci-fi",
+        "open" : 2019,
+        "grade" : 8.39,
+        "img" : "",
+        "story" : "",
+        "preivew" : ""
+    }
+]
