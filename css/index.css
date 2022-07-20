@@ -28,7 +28,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    transition: .3s;
     
     position: fixed;
     z-index: 100;
@@ -57,8 +57,11 @@ a{
     list-style-type: none;
     position: fixed;
     z-index: 1000;
-    top: 200px;
-    left: 200vh;
+    top: 50%;
+
+    /* left: 200vh; */
+    right: 0.5vw; /*07-20 17:40 변경함*/
+    transform: translate(-50%,-50%);
 }
 .rightBar_Y>ul>li{
     width: 25px;
@@ -73,7 +76,7 @@ a{
 /* 섹션 공통 사이즈 */
 .section_Y{
     width: var(--width);
-    height: 600px;
+    height: 100vh;
 
     /* border: var(--border-sample); */
     background-color: var(--bg-color);

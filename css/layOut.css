@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
+#container_S {
+    border: 1px solid red;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "mainView"
+    "footer";
+}
+/* 헤더입니다 로고를 비롯한 카테고리,드라마,회원가입 등의 버튼이 위치할 예정이며 뷰어 기준 세로 10%를 할당하게 해뒀습니다. */
+/* 회의를 통해 세로길이 조정해서 사용하시면 되겠습니다. */
+#header_S {
+    border: 1px solid red;
+    width: 100vw;
+    height: 10vh;
+    grid-area: header;
+}
+
+/* 사이트의 메인이 되는 메인뷰어입니다, 내부 섹션을 3D캐러셀, 장르연도별 영화, 드라마로 이용할 수 있도록 세구역으로 다시 나눴습니다. */
+/* 좌우측은 여백으로 각각 뷰어 기준 가로 15% 씩 할당하였으며 실질적인 뷰박스의 크기는 가로 70%를 할당하였습니다. */
+/* 회의를 거쳐 여백의 크기는 조정될 수 있으며 각 메인섹션들은 border를 보여주기 위해 임시로 뷰어 기준 가로 70%씩 할당하였습니다. */
+/* 실제 작업시 세개의 메인섹션들은 height 값을 조정하거나 없에고 작업하시면 되겠습니다. */
+#mainView_S {
+    border: 1px solid red;
+    width: 100vw;
+    grid-area: mainView;
+    display: grid;
+    grid-template-areas: 
+    ". sec1 ."
+    ". sec2 ."
+    ". sec3 .";
+}
+.section_S {
+    margin: auto;
+}
+
+#section1_S {
+    width: 70vw;
+    height: 70vh;
+    grid-area: sec1;
+    border: 1px solid red;
+    
+    
+}
+#section2_S {
+    width: 70vw;
+    height: 70vh;
+    grid-area: sec2;
+    border: 1px solid red;
+    
+}
+#section3_S {
+    width: 70vw;
+    height: 70vh;
+    grid-area: sec3;
+    border: 1px solid red;
+    
+}
+
+/* 컨테이너 최하단 푸터 구역입니다 뷰어 기준 세로 30% 할당하였습니다, 컨텐츠의 양에 따라 수정하시면 됩니다*/
+#footer_S {
+    width: 100vw;
+    height: 30vh;
+    border: 1px 0 solid red;
+}
