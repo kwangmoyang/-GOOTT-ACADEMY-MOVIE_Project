@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans';
+    background-color: #292826;
+}
+
+#movieContainer_C{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.poster{
+    width: 200px;
+    height: 400px;
+}
+
+#movieContainer_C h1,#movieContainer_C h2,#movieContainer_C h3{
+    margin-bottom: 0.5rem;
+}
+
+.movies {
+    border: 1px solid black;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    width: 19%;
+    color: #f9d142;
+}
+
+select{
+    color: white;
+}
+
+button{
+    color: white;
+}
+
+#pageBtnContainer_C{
+    display: none;
+    border: 3px solid red;
+    color: white;
+    margin-top: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#pageBtnContainer_C a{
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pageBtnContainer_C a:visited{
+    color: white;
+}
