@@ -11,16 +11,26 @@
     background-color: #292826;
 }
 
-#movieContainer{
+#movieContainer_C{
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
 }
 
+.poster{
+    width: 200px;
+    height: 400px;
+}
+
+#movieContainer_C h1,#movieContainer_C h2,#movieContainer_C h3{
+    margin-bottom: 0.5rem;
+}
+
 .movies {
     border: 1px solid black;
-    margin-top: 1rem;
-    width: 30vw;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    width: 19%;
     color: #f9d142;
 }
 
@@ -32,6 +42,23 @@ button{
     color: white;
 }
 
-h1,h2,h3{
-    margin-bottom: 0.5rem;
+#pageBtnContainer_C{
+    display: none;
+    border: 3px solid red;
+    color: white;
+    margin-top: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#pageBtnContainer_C a{
+    margin-left: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#pageBtnContainer_C a:visited{
+    color: white;
 }
