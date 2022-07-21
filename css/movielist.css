@@ -3,12 +3,20 @@
     src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
 }
 
+:root{
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'GmarketSans';
     background-color: #292826;
+}
+
+.selectContainer_C{
+    border: 3px solid red;
 }
 
 #movieContainer_C{
@@ -18,12 +26,16 @@
 }
 
 .poster{
-    width: 200px;
-    height: 400px;
+    width: 150px;
+    height: 300px;
 }
 
-#movieContainer_C h1,#movieContainer_C h2,#movieContainer_C h3{
+#movieContainer_C p{
     margin-bottom: 0.5rem;
+    font-size: 10px;
+}
+#movieContainer_C h4{
+    display: none;
 }
 
 .movies {
@@ -54,11 +66,38 @@ button{
 
 #pageBtnContainer_C a{
     margin-left: 1rem;
-    color: white;
+    /* color: white; */
     text-decoration: none;
     cursor: pointer;
+    transition: .3s;
+    
 }
 
 #pageBtnContainer_C a:visited{
-    color: white;
+    /* color: white; */
 }
+
+#previewDiv_C{
+    width: 460px;
+    height: 315px;
+    
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%);  */
+    display: none;
+
+}
+
+#exit{
+    position: absolute;
+    z-index: 3;
+    color: white;
+    font-size: 30px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+}
+
+
+
