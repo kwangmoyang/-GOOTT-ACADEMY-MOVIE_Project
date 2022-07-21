@@ -40,6 +40,9 @@
 .section_S {
     margin: auto;
 }
+.section_K {
+    margin: auto;
+}
 
 #section1_S {
     width: 70vw;
@@ -51,17 +54,53 @@
 }
 #section2_S {
     width: 70vw;
-    height: 70vh;
+    height: 80vh;
     grid-area: sec2;
     border: 1px solid red;
     
 }
-#section3_S {
+/* 섹션3번 드라마 구역입니다. 높이 10vh줄이고 섹션2번에 10vh 할당하였습니다. */
+#section3_K {
     width: 70vw;
-    height: 70vh;
+    height: 60vh;
     grid-area: sec3;
     border: 1px solid red;
-    
+    background-color: #292826;
+    display: flex;
+    overflow: hidden;
+}
+/* 드라마 포스터 및 소개글 setInterver 사용하여 전환하기 위한 구역입니다. */
+.dramaTerritory_K {
+    width: 70vw;
+    height: 60vh;
+    display: flex;
+
+}
+/* 드라마 포스터 구역입니다. */
+.poster_K{
+    width: 33vw;
+    height: 60vh;
+    border: 1px solid yellow;
+    background-color: #292826;
+}
+.poster_K > img{
+    width: 25vw;
+    height: 60vh;
+    margin-left: 4vw;
+}
+/* 드라마 소개글 구역입니다. */
+.content_K{
+    width: 37vw;
+    height: 60vh;
+    color: white;
+    padding: 1vw 1vw 0 1vw;
+    background-color: #292826;
+}
+.content_K > p{
+    margin-bottom: 1vh;
+}
+.content_K > li{
+    margin-left: 1vw;
 }
 
 /* 컨테이너 최하단 푸터 구역입니다 뷰어 기준 세로 30% 할당하였습니다, 컨텐츠의 양에 따라 수정하시면 됩니다*/
