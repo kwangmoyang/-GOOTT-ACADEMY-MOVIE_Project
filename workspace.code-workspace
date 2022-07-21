@@ -1,10 +1,11 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"name": "Movie_project",
+			"path": "."
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "HTML5"
+		"liveServer.settings.multiRootWorkspaceName": "프로젝트_MAIN"
 	}
 }

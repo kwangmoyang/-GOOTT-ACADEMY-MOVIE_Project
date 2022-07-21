@@ -23,7 +23,6 @@ a{
     height: 100px;
 
     border: var(--border-sample);
-    /* background-color: var(--bg-color); */
 
     display: flex;
     justify-content: space-between;
@@ -32,7 +31,7 @@ a{
     
     position: fixed;
     z-index: 100;
-    /* display: none; */
+
 }
 
 
@@ -46,7 +45,7 @@ a{
     border-radius: var(--border-radius);
     margin-right: 40px;
 }
-.header_Y>img{
+.header_Y>a>img{
     width: 200px;
     height: 80px;
     margin-left: 40px;
@@ -84,39 +83,48 @@ a{
 
     position: relative;
 
-    /* background-image: url(https://platum.kr/wp-content/uploads/2015/12/ceqfnmsw8aemk7w-tile-1024x725.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* filter: saturate(70%); */
+    /* filter: brightness(0.5); */
     
 }
 /* 섹션별 이미지 삽입 */
 .one_Y{
-    /* background-image: url(img/2.jpg); */
-    background-color: brown;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(/img/section1.jpg);
 }
+
 .two_Y{
-    /* background-image: url(img/3.jpg); */
-    background-color: bisque;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(/img/section2.jpg);
 }
 .thr_Y{
-    /* background-image: url(img/3.jpg); */
-    background-color: brown;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(/img/section3.jpg);
 }
 .four_Y{
-    /* background-image: url(img/3.jpg); */
-    background-color: bisque;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url(/img/section4.jpg);
 }
 
 /* 텍스트존 박스 설정 */
-.section_Y>.text-zone_Y{
+.text-zone_Y{
     width: 180vh;
     text-align: center;
     line-height: 10vh;
 
     border: var(--border-sample);
-
+    
+    color: #F9D142;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -124,10 +132,10 @@ a{
 }
 
 /* 텍스트 상세 사이즈 조절 */
-.section_Y>.text-zone_Y>h1{
-    font-size: 50px;
+.text-zone_Y>h1{
+    font-size: 47px;
 }
-.section_Y>.text-zone_Y>p{
+.text-zone_Y>p{
     font-size: 20px;
     line-height: 60px;
 }
@@ -144,7 +152,7 @@ a{
 }
 
 /* 섹션버튼 */
-.section_Y>.text-zone_Y>button{
+.text-zone_Y>button{
     background-color: var(--bg2-color);
     border: 0px;
     width: 200px;
