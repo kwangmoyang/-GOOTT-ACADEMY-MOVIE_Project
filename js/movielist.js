@@ -50,8 +50,8 @@ function doAjax() {
             genreSelectText = genreSelectText.toLowerCase();
             yearSelectText = yearSelect_C.value;
             /*화면 출력전에 전화면 삭제*/
-            let divs = document.querySelectorAll('.movies');
-            let divs2 = document.querySelector('#divPage');
+            let divs = document.querySelectorAll('.movies_C');
+            let divs2 = document.querySelector('#divPage_C');
             for (let i = 0; i < divs.length; i++)
                 divs[i].remove();
             if (divs2)
@@ -611,7 +611,7 @@ function drawArray() {
         pageBtnContainer_C.style.display = 'block';
 
         if (sortedJsonArray.length % 10 == 0) 
-            sortedJsonArrayCount = sortedJsonArray.length / 10;
+            sortedJsonArrayCount = Math.floor(sortedJsonArray.length / 10);
         
         else 
             sortedJsonArrayCount = Math.floor(sortedJsonArray.length / 10) + 1;
@@ -622,20 +622,20 @@ function drawArray() {
 
         let divPage = document.createElement('div');
         pageBtnContainer_C.appendChild(divPage);
-        divPage.id = 'divPage';
+        divPage.id = 'divPage_C';
 
         let aPrev = document.createElement('a');
         aPrev.addEventListener('click', prevPage);
         aPrev.textContent = '이전';
-        aPrev.id = 'aPrev';
+        aPrev.id = 'aPrev_C';
         aPrev.style.opacity = '0';
         divPage.appendChild(aPrev);
 
         for (let j = 0; j < sortedJsonArrayCount; j++) {
             let aPage = document.createElement('a');
             aPage.textContent = `${j + 1}`;
-            aPage.id = `aPage${j + 1}`;
-            aPage.className = 'aPages';
+            aPage.id = `aPage_C${j + 1}`;
+            aPage.className = 'aPages_C';
             if(j == 0){
                 aPage.style.color = '#f9d142';
                 aPage.style.pointerEvents = 'none';
@@ -649,7 +649,7 @@ function drawArray() {
 
         let aNext = document.createElement('a');
         aNext.textContent = '다음';
-        aNext.id = 'aNext';
+        aNext.id = 'aNext_C';
         aNext.addEventListener('click', nextPage);
         divPage.appendChild(aNext);
 
@@ -683,44 +683,62 @@ function drawArray() {
 }
 
 function drawMovies(i){
-    let movieDiv = document.querySelector('#previewDiv_C');
-    let movie = document.querySelector('#iframe');
-    let exit = document.querySelector('#exit');
-    let poster = document.createElement('img');
-    let div = document.createElement('div');
-    let p1 = document.createElement('p');
-    let p2 = document.createElement('p');
-    let p3 = document.createElement('p');
-    let p4 = document.createElement('h4');
-
-    div.className = `movies${i} movies`;
-    poster.className = 'poster';
+    let movieDiv = document.querySelector('#previewDiv_C');//ifram 감싼 디비전
+    let movie = document.querySelector('#iframe_C');//iframe
+    let exit = document.querySelector('#exit_C');//iframe 끄는 아이콘
     
-    p1.innerHTML = sortedJsonArray[i].title;
-    p2.innerHTML = sortedJsonArray[i].genre;
-    p3.innerHTML = sortedJsonArray[i].open;
-    p4.innerHTML = sortedJsonArray[i].preview;
+    let poster = document.createElement('img');//포스터
+    let div = document.createElement('div');//영화 1개 컨테이너 디비전
+    let divCover = document.createElement('div');//호버시 효과 줄 디비전
+    
+    let title = document.createElement('p');
+    let genre = document.createElement('p');
+    let open = document.createElement('p');
+    let preview = document.createElement('h4');
+    let playIcon = document.createElement('h5');
+    playIcon.innerHTML = '<ion-icon name="play-outline" class="play_C"></ion-icon>';
+    
+    
+    
+    div.className = `movies${i} movies_C`;
+    divCover.className = 'moviesCover_C';
+    poster.className = 'poster_C';
+    
+    title.innerHTML = sortedJsonArray[i].title;
+    genre.innerHTML = sortedJsonArray[i].genre;
+    open.innerHTML = sortedJsonArray[i].open;
+    preview.innerHTML = sortedJsonArray[i].preview;
+    
     poster.src = "./img/" + sortedJsonArray[i].img;
-    
+    let starNum = Math.floor((sortedJsonArray[i].grade) % 10);
+    for(let k = 0; k < starNum; k++)
+        divCover.innerHTML += '<ion-icon name="star" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
+    if(sortedJsonArray[i].grade % 10 != 0)
+        divCover.innerHTML += '<ion-icon name="star-half" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
+    divCover.innerHTML += '<br>' + sortedJsonArray[i].grade;
+    divCover.innerHTML += '<br><br>' + sortedJsonArray[i].story;
+    divCover.appendChild(playIcon);
     movieContainer_C.appendChild(div);
+    document.querySelector(`.movies${i}`).appendChild(divCover);
     document.querySelector(`.movies${i}`).appendChild(poster);
-    document.querySelector(`.movies${i}`).appendChild(p1);
-    document.querySelector(`.movies${i}`).appendChild(p2);
-    document.querySelector(`.movies${i}`).appendChild(p3);
-    document.querySelector(`.movies${i}`).appendChild(p4);
+    document.querySelector(`.movies${i}`).appendChild(title);
+    document.querySelector(`.movies${i}`).appendChild(genre);
+    document.querySelector(`.movies${i}`).appendChild(open);
+    document.querySelector(`.movies${i}`).appendChild(preview);
     
-    div.addEventListener('click' , function(){
-        console.log(p4.textContent);
-        movieDiv.style.display = 'block';
-        
-        movieDiv.style.top = this.offsetTop + (this.offsetHeight / 2) + 'px';
-        movieDiv.style.left = this.offsetLeft + 'px';
-        movie.src = p4.textContent;
-    });
-
     exit.addEventListener('click' , function(){
         movieDiv.style.display = 'none';
         movie.src = '';
+    });
+    //07-21 영화 컨테이너 클릭시 유튜브 재생에서 재생버튼 클릭시 유튜브 재생으로 변경
+    playIcon.addEventListener('click' , function(e){
+        // console.dir(this.parentNode.parentNode.children[5].innerHTML);
+        console.log(e.pageX , e.pageY);
+        movieDiv.style.display = 'block';
+        movieDiv.style.top = e.pageY - 157 + 'px';
+        movieDiv.style.left = e.pageX - 230 + 'px';
+        movie.src = this.parentNode.parentNode.children[5].innerHTML;
+        
     });
    
 }
@@ -737,7 +755,7 @@ function prevPage() {
         this.style.pointerEvents = 'none';
         doAjax2();
     }
-    let aNext = document.getElementById('aNext');
+    let aNext = document.getElementById('aNext_C');
     aNext.style.opacity = '1';
     aNext.style.pointerEvents = 'auto';
 }
@@ -754,7 +772,7 @@ function nextPage() {
         this.style.pointerEvents = 'none';
         doAjax2();
     }
-    let aPrev = document.getElementById('aPrev');
+    let aPrev = document.getElementById('aPrev_C');
     aPrev.style.opacity = '1';
     aPrev.style.pointerEvents = 'auto';
 
@@ -766,8 +784,8 @@ function pageShow() {
     
     currentPageShow();
     
-    let aPrev = document.getElementById('aPrev');
-    let aNext = document.getElementById('aNext');
+    let aPrev = document.getElementById('aPrev_C');
+    let aNext = document.getElementById('aNext_C');
     
     
     if(currentPageNum == sortedJsonArrayCount){
@@ -790,8 +808,9 @@ function pageShow() {
 }
 
 function currentPageShow(){
-    let aPages = document.querySelectorAll('.aPages');
-    let aPageSelect = document.getElementById(`aPage${currentPageNum}`);
+    console.log(currentPageNum);
+    let aPages = document.querySelectorAll('.aPages_C');
+    let aPageSelect = document.getElementById(`aPage_C${currentPageNum}`);
     
     for(item of aPages){
         item.style.color = 'white';
@@ -810,7 +829,7 @@ function doAjax2() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
 
-            let divs = document.querySelectorAll('.movies');
+            let divs = document.querySelectorAll('.movies_C');
             for (let i = 0; i < divs.length; i++) {
                 divs[i].remove();
             }
