@@ -1,6 +1,11 @@
 *{
     margin: 0;
 }
+/* 07/21 양광모 폰트추가 */
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
 
 :root {
     --border: 3px solid #292826;
