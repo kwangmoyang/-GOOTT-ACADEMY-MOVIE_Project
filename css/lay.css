@@ -3,6 +3,7 @@
     font-family: 'GmarketSans';
     src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
 }
+
 :root{
     --colorYellow : #f9d142;
     --colorBlack : #292826;
@@ -20,7 +21,7 @@
 /* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
 #container_S {
     border: 1px solid red;
-    width: 100%;/*07-21 최원석 100%로 변경 >> vw 스크롤바 생기는 이슈*/
+    width: 100vw;
     display: grid;
     grid-template-areas:
     "header"
@@ -31,7 +32,7 @@
 /* 회의를 통해 세로길이 조정해서 사용하시면 되겠습니다. */
 #header_S {
     border: 1px solid red;
-    width: 100%;/*07-21 최원석 100%로 변경 >> vw 스크롤바 생기는 이슈*/
+    width: 100vw;
     height: 10vh;
     grid-area: header;
 }
@@ -42,7 +43,7 @@
 /* 실제 작업시 세개의 메인섹션들은 height 값을 조정하거나 없에고 작업하시면 되겠습니다. */
 #mainView_S {
     border: 1px solid red;
-    width: 100%;/*07-21 최원석 100%로 변경 >> vw 스크롤바 생기는 이슈*/
+    width: 100vw;
     grid-area: mainView;
     display: grid;
     grid-template-areas: 
@@ -118,7 +119,7 @@
 
 /* 컨테이너 최하단 푸터 구역입니다 뷰어 기준 세로 30% 할당하였습니다, 컨텐츠의 양에 따라 수정하시면 됩니다*/
 #footer_S {
-    width: 100%;/*07-21 최원석 100%로 변경 >> vw 스크롤바 생기는 이슈*/
+    width: 100vw;
     height: 30vh;
     border: 1px 0 solid red;
 }

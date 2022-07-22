@@ -9,7 +9,6 @@ let thirdTop = section[2].offsetTop;
 let fourTop = section[3].offsetTop;
 
 // 헤더 불러옴
-
 let menu = document.querySelector('.header_Y');
 let scrollTop = window.scrollY;
 
@@ -86,3 +85,4 @@ function color(effect,ele,ele2,ele3){
     right[ele2].style.background='var(--bg2-color)';
     right[ele3].style.background='var(--bg2-color)';
 }
+
