@@ -85,3 +85,4 @@ function color(effect,ele,ele2,ele3){
     right[ele2].style.background='var(--bg2-color)';
     right[ele3].style.background='var(--bg2-color)';
 }
+

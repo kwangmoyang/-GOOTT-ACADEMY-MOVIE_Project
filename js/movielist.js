@@ -1,9 +1,12 @@
+let mainImgDiv_C = document.querySelector('.mainImgDiv_C'); //메인 이미지부분 이미지들 4개 감싼 디비전
+let firstItemClone = mainImgDiv_C.firstElementChild.cloneNode(true); //메인 이미지 1번 이미지 복사
+mainImgDiv_C.appendChild(firstItemClone);//복사된 이미지 5번에 추가
+
 let genreSelect_C = document.getElementById('genreSelect_C'); //장르 셀렉트
 let yearSelect_C = document.getElementById('yearSelect_C'); //년도 셀렉트
 const btnSelect_C = document.getElementById('btnSelect_C'); //소팅 검색 버튼
 let movieContainer_C = document.getElementById('movieContainer_C'); //소팅 결과 그릴 컨테이너
 let pageBtnContainer_C = document.getElementById('pageBtnContainer_C'); // 페이지 번호 그릴 컨테이너
-
 
 let genreSelectText; //장르 텍스트
 let yearSelectText; //년도 텍스트
@@ -13,6 +16,11 @@ let pageEndCount; //페이지 이동시 보여줄 마지막 배열번호
 
 let sortedJsonArray = []; //최종 소팅된 영화 데이터 들어가 있는 배열
 let currentPageNum = 1; //현재 페이지 번호
+
+window.onload = function () {
+    infinitySlide(); //메인 부분 무한 슬라이드
+}
+
 /*장르,년도 선택후 버튼 클릭*/
 btnSelect_C.addEventListener('click', function () {
     doAjax();
@@ -26,7 +34,8 @@ function doAjax() {
     text = null;
 
     xhr.open('get', './json/movielist2.json');
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // xhr.open('get', 'https://doosan2058.dothome.co.kr/json/movielist2.json');
+    // xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
@@ -604,18 +613,18 @@ function doAjax() {
 }
 
 function drawArray() {
-    
+
     if (sortedJsonArray.length > 10) {
         pageStartCount = 0;
         pageEndCount = 10;
         pageBtnContainer_C.style.display = 'block';
 
-        if (sortedJsonArray.length % 10 == 0) 
+        if (sortedJsonArray.length % 10 == 0)
             sortedJsonArrayCount = Math.floor(sortedJsonArray.length / 10);
-        
-        else 
+
+        else
             sortedJsonArrayCount = Math.floor(sortedJsonArray.length / 10) + 1;
-        
+
 
         console.log(`정렬된 영화 수: ${sortedJsonArray.length}`);
         console.log(`페이지 수: ${sortedJsonArrayCount}`);
@@ -636,16 +645,16 @@ function drawArray() {
             aPage.textContent = `${j + 1}`;
             aPage.id = `aPage_C${j + 1}`;
             aPage.className = 'aPages_C';
-            if(j == 0){
+            if (j == 0) {
                 aPage.style.color = '#f9d142';
                 aPage.style.pointerEvents = 'none';
             }
             divPage.appendChild(aPage);
             aPage.addEventListener('click', pageShow);
-           
+
         }
 
-        
+
 
         let aNext = document.createElement('a');
         aNext.textContent = '다음';
@@ -653,16 +662,16 @@ function drawArray() {
         aNext.addEventListener('click', nextPage);
         divPage.appendChild(aNext);
 
-        aPrev.addEventListener('mouseover', function(){
+        aPrev.addEventListener('mouseover', function () {
             this.style.color = 'crimson';
         });
-        aPrev.addEventListener('mouseout', function(){
+        aPrev.addEventListener('mouseout', function () {
             this.style.color = 'white';
         });
-        aNext.addEventListener('mouseover', function(){
+        aNext.addEventListener('mouseover', function () {
             this.style.color = 'crimson';
         });
-        aNext.addEventListener('mouseout', function(){
+        aNext.addEventListener('mouseout', function () {
             this.style.color = 'white';
         });
     }
@@ -676,44 +685,44 @@ function drawArray() {
 
     for (let i = pageStartCount; i < pageEndCount; i++) {
         drawMovies(i);
-        
+
     }
-    
-    
+
+
 }
 
-function drawMovies(i){
+function drawMovies(i) {
     let movieDiv = document.querySelector('#previewDiv_C');//ifram 감싼 디비전
     let movie = document.querySelector('#iframe_C');//iframe
     let exit = document.querySelector('#exit_C');//iframe 끄는 아이콘
-    
+
     let poster = document.createElement('img');//포스터
     let div = document.createElement('div');//영화 1개 컨테이너 디비전
     let divCover = document.createElement('div');//호버시 효과 줄 디비전
-    
+
     let title = document.createElement('p');
     let genre = document.createElement('p');
     let open = document.createElement('p');
     let preview = document.createElement('h4');
     let playIcon = document.createElement('h5');
     playIcon.innerHTML = '<ion-icon name="play-outline" class="play_C"></ion-icon>';
-    
-    
-    
+
+
+
     div.className = `movies${i} movies_C`;
     divCover.className = 'moviesCover_C';
     poster.className = 'poster_C';
-    
+
     title.innerHTML = sortedJsonArray[i].title;
     genre.innerHTML = sortedJsonArray[i].genre;
     open.innerHTML = sortedJsonArray[i].open;
     preview.innerHTML = sortedJsonArray[i].preview;
-    
+
     poster.src = "./img/" + sortedJsonArray[i].img;
     let starNum = Math.floor((sortedJsonArray[i].grade) % 10);
-    for(let k = 0; k < starNum; k++)
+    for (let k = 0; k < starNum; k++)
         divCover.innerHTML += '<ion-icon name="star" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
-    if(sortedJsonArray[i].grade % 10 != 0)
+    if (sortedJsonArray[i].grade % 10 != 0)
         divCover.innerHTML += '<ion-icon name="star-half" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
     divCover.innerHTML += '<br>' + sortedJsonArray[i].grade;
     divCover.innerHTML += '<br><br>' + sortedJsonArray[i].story;
@@ -725,28 +734,28 @@ function drawMovies(i){
     document.querySelector(`.movies${i}`).appendChild(genre);
     document.querySelector(`.movies${i}`).appendChild(open);
     document.querySelector(`.movies${i}`).appendChild(preview);
-    
-    exit.addEventListener('click' , function(){
+
+    exit.addEventListener('click', function () {
         movieDiv.style.display = 'none';
         movie.src = '';
     });
     //07-21 영화 컨테이너 클릭시 유튜브 재생에서 재생버튼 클릭시 유튜브 재생으로 변경
-    playIcon.addEventListener('click' , function(e){
+    playIcon.addEventListener('click', function (e) {
         // console.dir(this.parentNode.parentNode.children[5].innerHTML);
-        console.log(e.pageX , e.pageY);
+        console.log(e.pageX, e.pageY);
         movieDiv.style.display = 'block';
         movieDiv.style.top = e.pageY - 157 + 'px';
         movieDiv.style.left = e.pageX - 230 + 'px';
         movie.src = this.parentNode.parentNode.children[5].innerHTML;
-        
+
     });
-   
+
 }
 
 function prevPage() {
     currentPageNum -= 1;
     currentPageShow();
-    
+
     if (currentPageNum != 1) {
         doAjax2();
     }
@@ -781,42 +790,42 @@ function nextPage() {
 
 function pageShow() {
     currentPageNum = parseInt(this.textContent);
-    
+
     currentPageShow();
-    
+
     let aPrev = document.getElementById('aPrev_C');
     let aNext = document.getElementById('aNext_C');
-    
-    
-    if(currentPageNum == sortedJsonArrayCount){
+
+
+    if (currentPageNum == sortedJsonArrayCount) {
         aNext.style.opacity = '0';
         aNext.style.pointerEvents = 'none';
     }
-    else{
+    else {
         aNext.style.opacity = '1';
         aNext.style.pointerEvents = 'auto';
     }
-    if(currentPageNum == 1){
+    if (currentPageNum == 1) {
         aPrev.style.opacity = '0';
         aPrev.style.pointerEvents = 'none';
     }
-    else{
+    else {
         aPrev.style.opacity = '1';
         aPrev.style.pointerEvents = 'auto';
     }
     doAjax2();
 }
 
-function currentPageShow(){
+function currentPageShow() {
     console.log(currentPageNum);
     let aPages = document.querySelectorAll('.aPages_C');
     let aPageSelect = document.getElementById(`aPage_C${currentPageNum}`);
-    
-    for(item of aPages){
+
+    for (item of aPages) {
         item.style.color = 'white';
         item.style.pointerEvents = 'auto';
     }
-    
+
     aPageSelect.style.color = '#f9d142';
     aPageSelect.style.pointerEvents = 'none';
 }
@@ -824,6 +833,8 @@ function currentPageShow(){
 function doAjax2() {
     let xhr = new XMLHttpRequest();
     xhr.open('get', './json/movielist2.json');
+    // xhr.open('get', 'https://doosan2058.dothome.co.kr/json/movielist2.json');
+    
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send();
     xhr.onreadystatechange = function () {
@@ -845,6 +856,27 @@ function doAjax2() {
                 drawMovies(i);
         }
     }
+}
+//메인 이미지 무한 슬라이드
+function infinitySlide() {
+
+    let curIndex = 0;
+    setInterval(function () {
+
+        mainImgDiv_C.style.transition = '0.5s';
+        mainImgDiv_C.style.transform = `translateX(${-20 * (curIndex + 1)}%)`;
+
+        curIndex++;
+
+        if (curIndex == 4) {
+            setTimeout(function () {
+                mainImgDiv_C.style.transition = '0s';
+                mainImgDiv_C.style.transform = 'translateX(0)';
+            }, 501)
+            curIndex = 0;
+        }
+
+    }, 3 * 1000);
 }
 
 
