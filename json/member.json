@@ -1,0 +1,26 @@
+[
+    {
+        "email" : "admin@admin.com",
+        "nickname" : "관리자",
+        "password" : "1234",
+        "authority" : "admin"
+    },
+    {
+        "email" : "doosan2058@naver.com",
+        "nickname" : "최원석",
+        "password" : "1111",
+        "authority" : "member"
+    },
+    {
+        "email" : "hong@gmail.com",
+        "nickname" : "hong",
+        "password" : "4321",
+        "authority" : "member"
+    },
+    {
+        "email" : "kim@nate.com",
+        "nickname" : "김순자",
+        "password" : "abcd1234",
+        "authority" : "member"
+    }
+]
