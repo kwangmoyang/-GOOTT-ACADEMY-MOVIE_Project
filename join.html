@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root{
+            --yello : #F9D142;
+            --black : #292826;
+        }
+
+        .loginDiv{
+            width: 600px;
+            height: 600px;
+            background-color: #4a4841;
+            margin: 100px auto;
+            padding: 1rem;
+        }
+
+        #joinForm{
+            padding: 1rem;
+            
+        }
+
+        .formInputs{
+            display: block;
+            width: 90%;
+            height: 50px;
+           
+            border-radius: 4px;
+            background-color: var(--black);
+            color : var(--yello);
+            font-size: 1.2rem;
+            padding-left: 1rem;
+        }
+
+        #submit{
+            display: block;
+            
+            padding: 1rem;
+            border: 4px;
+            background-color: var(--black);
+            color: white;
+        }
+
+        .formSpans{
+            display: inline-block;
+            
+            
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loginDiv">
+        <form action="lay.html" method="get" onsubmit="return formCheck();" id="joinForm">
+            <input type="email" name="" id="email" class="formInputs" placeholder="Email" onkeyup="emailCheck(this);">
+            <span id="emailSpan" class="formSpans">emailSpan</span>
+            
+            <input type="text" name="" id="nickname" class="formInputs" placeholder="Nickname">
+            <span id="nicknameSpan" class="formSpans">nicknameSpan</span>
+            
+            <input type="password" name="" id="password1" class="formInputs" placeholder="password1">
+            <span id="password1Span" class="formSpans">password1Span</span>
+            
+            <input type="password" name="" id="password2" class="formInputs" placeholder="password2">
+            <span id="password2Span" class="formSpans">password2Span</span>
+            
+            <input type="submit" value="Join" id="submit">
+        </form>
+
+    </div>
+
+    <script>
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g; //최소 8 자, 최소 하나의 문자 및 하나의 숫자
+        const emailPattern = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g; //이메일 
+        const whiteSpacePattern = /\s/g; //공백
+        
+        function formCheck(){
+            let emailText = document.getElementById('email');
+            let nicknameText = document.getElementById('nickname');
+            let password1Text = document.getElementById('password1');
+            let password2Text = document.getElementById('password2');
+
+            
+        }
+
+        function emailCheck(){
+            let emailText = document.getElementById('email');
+            let emailSpan = document.getElementById('emailSpan');
+
+            console.log(this.value);
+
+            if(this.value == ''){
+                emailSpan.innerHTML = '';
+            }
+            else if(emailPattern.test(this.value) == true){
+                emailSpan.innerHTML = 'good';
+            }
+            else if(emailPattern.test(this.value) == false){
+                emailSpan.innerHTML = 'bad';
+            }
+           
+        }
+
+
+    </script>
+</body>
+</html>
