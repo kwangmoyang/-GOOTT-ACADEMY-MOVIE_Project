@@ -6,7 +6,6 @@
     font-family: 'GmarketSans';
     src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
 }
-
 :root {
     --border: 3px solid #292826;
     --bg-color: #292826;

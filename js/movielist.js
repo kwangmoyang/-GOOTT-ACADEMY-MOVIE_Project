@@ -834,6 +834,7 @@ function doAjax2() {
     let xhr = new XMLHttpRequest();
     xhr.open('get', './json/movielist2.json');
     // xhr.open('get', 'https://doosan2058.dothome.co.kr/json/movielist2.json');
+    
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send();
     xhr.onreadystatechange = function () {

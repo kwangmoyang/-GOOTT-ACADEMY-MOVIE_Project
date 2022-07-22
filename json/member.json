@@ -11,6 +11,7 @@
         "password" : "1111",
         "authority" : "member"
     },
+    
     {
         "email" : "hong@gmail.com",
         "nickname" : "hong",

@@ -9,6 +9,7 @@ let thirdTop = section[2].offsetTop;
 let fourTop = section[3].offsetTop;
 
 // 헤더 불러옴
+
 let menu = document.querySelector('.header_Y');
 let scrollTop = window.scrollY;
 
