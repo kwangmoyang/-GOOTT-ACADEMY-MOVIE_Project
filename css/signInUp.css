@@ -1,3 +1,9 @@
+/* 테마 컬러
+-노랑
+#F9D142
+-검정
+#292826 */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,28 +22,28 @@
 #background_S {
     position: absolute;
     width: 100%;
-    height: 140vh;
+    height: 160vh;
     z-index: -1;
     background-image: url("../img/background2_S.jpg");
     background-position: center;
     background-size: cover;
-    filter:brightness(0.4);
+    filter:brightness(0.2);
 }
 #header_S {
     width: 100%;
     height: 10vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     grid-area: header;
     display: grid;
     grid-template-areas: 
     "Logo Sign";
-    background: linear-gradient(to bottom, rgb(255, 255, 255, 0.15), rgba(255,255,255, 0));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255,255,255, 0));
 }
 
 #headerLogo_S {
     width: 15vw;
     height: 10vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: inline-block;
     grid-area: Logo;
     justify-self: start;
@@ -46,7 +52,7 @@
 #headerSignUp_S {
     width: 10vw;
     height: 10vh;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: inline-block;
     grid-area: Sign;
     justify-self: end;
@@ -55,25 +61,115 @@
 #Logo_S {
     width: 15vw;
     height: 10vh;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-top: 1vw;
+    /* 클릭시 메인페이지 링크 */
 }
 #signUp_S {
-    width: 7vw;
-    height: 7vh;
-    border: 1px solid red;
+    width: 6vw;
+    height: 6vh;
+    /* border: 1px solid red; */
+    background-color:#F9D142;
+    border-radius: 5px;
     place-self: center;
+    color: #292826;
+    text-align: center;
+    line-height: 6vh;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    margin-right: 3vw;
+    margin-top: 1vw;
+    /* 클릭시 모달창 띄우거나 따로 회원가입 페이지로 이동 예정, 회의때 얘기해보고 결정 */
+    /* 깔끔한 구성을 위해 mainView 부분 하단으로 회원가입 이동 건의 후 수정 예정 */
 }
 
 #main_S {
     width: 70%;
-    height: 100vh;
-    border: 1px solid red;
+    height: 120vh;
+    /* border: 1px solid red; */
     grid-area: main;
     justify-self: center;
+    display: grid;
+}
+
+#mainView_S {
+    width: 50vw;
+    height: 70vh;
+    /* border: 1px solid red; */
+    /* background-color: rgba(0,0,0, 0.7); */
+    justify-self: center;
+    display: grid;
+    justify-content: center;
+    margin-top: 10vh;
+}
+#viewText_S {
+    height: 10vh;
+    text-align: center;
+    color: #F9D142;
+    font-size: 2.2em;
+    font-weight: bolder;
+    /* border: 1px solid blue; */
+    margin-bottom: 5vh;
+}
+
+.viewStyle_S {
+    width: 35vw;
+    height: 8vh;
+    border: 0.1px solid gray;
+    cursor: pointer;
+    color: gray;
+    transition: 0.5s;
+    line-height: 6vh;
+    font-size: 1.1em;
+    padding: 1vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.viewStyle_S:hover {
+    width: 35vw;
+    height: 8vh;
+    margin-bottom: 1vh;
+    cursor: pointer;   
+    transform: scale(1.05);
+}
+
+#vsYB_S:hover {
+    border: 0.1vw solid #F9D142;
+    color: #F9D142;
+}
+#vsNA_S:hover {
+    border: 0.1vw solid rgb(33, 200, 77);
+    color: rgb(33, 200, 77);
+}
+#vsKA_S:hover {
+    border: 0.1vw solid rgb(250, 221, 8);
+    color: rgb(250, 221, 8);;
+}
+#vsFB_S:hover {
+    border: 0.1vw solid rgb(23, 93, 238);
+    color: rgb(23, 93, 238);
+}
+#vsAP_S:hover {
+    border: 0.1vw solid rgb(195, 195, 199);
+    color: rgb(195, 195, 199);
 }
 
 #footer_S {
     width: 100%;
     height: 30vh;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     grid-area: footer;
+}
+
+#footerFilter_S {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-self: end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255,255,255, 0));
+    z-index: -1;
 }
