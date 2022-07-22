@@ -1,0 +1,53 @@
+[
+    {
+        "genre" : "Drama",
+        "title" : "이상한 변호사 우영우",
+        "open" : "2022-06-29",
+        "grade" : 9,
+        "img" : "drama1.jpg",
+        "story"  : 
+        "천재적인 두뇌와 자폐스펙트럼을 동시에 가진 신입 변호사 우영우(박은빈 분)의 대형 로펌 생존기",
+        "preview" : "https://www.youtube.com/embed/JQ2rukD8B8U?autoplay=1&mute=1"
+      },
+      
+      {
+        "genre" : "Drama",
+        "title" : "왜 오수재인가",
+        "open" : "2022-06-03",
+        "grade" : 9,
+        "img" : "drama2.jpg",
+        "story"  : 
+        "살기 위해, 가장 위에서, 더 독하게 성공만을 쫓다 속이 텅 비어버린 차가운 변호사 오수재와 그런 그녀를 지키기 위해서라면 무엇도 두렵지 않은 로스쿨 학생 공찬의 아프지만 설레는 이야기",
+        "preview" :"https://www.youtube.com/embed/fJI1a-RS3vQ?autoplay=1&mute=1"
+      },
+      {
+        "genre" : "Drama",
+        "title" : "킹덤",
+        "open" : "2019-01-25",
+        "grade" : 8.2,
+        "img" : "drama3.jpg",
+        "story"  : 
+        "죽었던 왕이 되살아나자 반역자로 몰린 왕세자가 향한 조선의 끝, 그곳에서 굶주림 끝에 괴물이 되어버린 이들의 비밀을 파헤치며 시작되는 미스터리 스릴러",
+        "preview" : "https://www.youtube.com/embed/JeCm_7YlqMc?autoplay=1&mute=1"
+      },
+      {
+        "genre" : "Drama",
+        "title" : "시크릿가든",
+        "open" : "2010-11-13",
+        "grade" : 9.5,
+        "img" : "drama4.jpg",
+        "story"  : 
+        "무술감독을 꿈꾸는 스턴트 우먼 길라임과 까칠한 백만장자 백화점 사장 김주원의 영혼이 바뀌면서 벌어지는 일을 다룬 로맨스 판타지 드라마",
+        "preview" : "https://www.youtube.com/embed/khx8x8mjxzY?autoplay=1&mute=1"
+      },
+      {
+        "genre" : "Drama",
+        "title" : "이산",
+        "open" : "2007-09-17",
+        "grade" : 9.5,
+        "img" : "drama5.jpg",
+        "story"  : 
+        "18세기 후반, 조선조 제22대 임금 정조 이산의 인생을 담은 드라마",
+        "preview" : "https://www.youtube.com/embed/6UqkXsbOC4k?autoplay=1&mute=1"
+      }
+]

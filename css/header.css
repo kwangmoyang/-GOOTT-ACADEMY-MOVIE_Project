@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
+#header_P {
+    background-color: #292826 ;
+    width: 100vw;
+    height: 10vh;
+    /* grid-area: header; */
+}
+
+.logo_P{
+    float : left;
+    width: 15vw;
+    height: 10vh;
+}
+.logo_P img{
+    margin-left : 10px;
+    width : 90%;
+    height : 100%; 
+}
+
+header{
+    height: 250px;
+}
+.con_P{
+    display: flex;
+    justify-content: space-around;
+}
+.menuin_P{
+    width : 25vw;
+    height : 10vh;
+    display: inline-block;
+    /* flex-direction : row;
+    justify-content: flex-start; */
+}
+
+.category_P{
+    display: inline-block;
+}
+.drama_P{
+    display: inline-block;   
+}
+
+.category_P>a {
+    text-decoration: none;
+  }
+
+
+  
+.menuin_P{
+    display: inline-block;
+    padding: 20px 50px;
+    color: white;
+  }
+
+
+.search_P {
+    position: relative;
+    width: 250px;
+  }
+  
+.search_P>input {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+#sicon_P{
+    position : absolute;
+    width: 17px;
+    top: 10px;
+    right: 12px;
+    margin: 0;
+    display:inline-block;
+  }
+
+
+
+.login_P{
+    font-size: 35px;
+    line-height: 50px;
+    float:inline-end;
+}
