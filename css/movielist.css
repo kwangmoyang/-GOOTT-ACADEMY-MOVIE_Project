@@ -1,11 +1,26 @@
-@font-face {
-    font-family: 'GmarketSans';
-    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+.mainImgCon_C {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
+.mainImgDiv_C {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    
+}
 
+.mainImgs_C {
+    width: 100%;
+    height: 100%;
+}
 
-
+.mainImg_C{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 
 .selectContainer_C{
     /* border: 3px solid red; */
@@ -66,6 +81,7 @@
     padding: 0.5rem;
 }
 /*무비스 호버시 효과줄 디비전*/
+
 .moviesCover_C{
     position: absolute;
     top: 0;
@@ -159,4 +175,3 @@
     color: crimson;
     transform: scale(1.2,1.2);
 }
-
