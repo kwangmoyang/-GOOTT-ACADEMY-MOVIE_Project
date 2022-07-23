@@ -1,22 +1,8 @@
-/*07-21 최원석 추가*/
-@font-face {
-    font-family: 'GmarketSans';
-    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
-}
 
-:root{
-    --colorYellow : #f9d142;
-    --colorBlack : #292826;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-     /*07-21 최원석 추가*/
-     font-family: 'GmarketSans'; 
-     background-color: var(--colorBlack);
-}
+
+
+
 
 /* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
 #container_S {
@@ -67,8 +53,10 @@
     
 }
 #section2_S {
-    width: 70%;
-    height: 80vh;
+    width: 70vw;
+    /* height: 80vh; */
+    height: 100vh; /*07-23 최원석 수정*/
+
     grid-area: sec2;
     border: 1px solid red;
     

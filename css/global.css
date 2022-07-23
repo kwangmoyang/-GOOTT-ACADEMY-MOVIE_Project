@@ -1,0 +1,19 @@
+/*07-22 최원석 추가*/
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
+
+:root{
+    --colorYellow : #f9d142;
+    --colorBlack : #292826;
+    --colorRed : red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans'; 
+    background-color: var(--colorBlack);
+}

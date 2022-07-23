@@ -1,27 +1,51 @@
 [
     {
-        "email" : "admin@admin.com",
-        "nickname" : "관리자",
-        "password" : "1234",
-        "authority" : "admin"
+        "email" : "projm2786@gmail.com",
+        "nickname" : "조준모",
+        "password" : "abcd0000",
+        "authority" : "관리자",
+        "payment" : "9999-12-31"
     },
     {
-        "email" : "doosan2058@naver.com",
+        "email" : "zjqtm96@gmail.com",
+        "nickname" : "양광모",
+        "password" : "abcd1111",
+        "authority" : "회원",
+        "payment" : "2022-11-25"
+    },
+    {
+        "email" : "comp2227@gmail.com",
+        "nickname" : "박예솔",
+        "password" : "abcd2222",
+        "authority" : "회원",
+        "payment" : "2022-9-15"
+    },
+    {
+        "email" : "suj7196@gmail.com",
+        "nickname" : "김수진",
+        "password" : "abcd3333",
+        "authority" : "회원",
+        "payment" : "2022-10-27"
+    },
+    {
+        "email" : "keepcrimson@naver.com",
+        "nickname" : "서승혁",
+        "password" : "abcd4444",
+        "authority" : "회원",
+        "payment" : "2022-9-2"
+    },
+    {
+        "email" : "doosan2058@gmail.com",
         "nickname" : "최원석",
-        "password" : "1111",
-        "authority" : "member"
-    },
-    
-    {
-        "email" : "hong@gmail.com",
-        "nickname" : "hong",
-        "password" : "4321",
-        "authority" : "member"
+        "password" : "abcd5555",
+        "authority" : "회원",
+        "payment" : "2022-8-11"
     },
     {
-        "email" : "kim@nate.com",
-        "nickname" : "김순자",
-        "password" : "abcd1234",
-        "authority" : "member"
+        "email" : "test@naver.com",
+        "nickname" : "홍길동",
+        "password" : "abcd6666",
+        "authority" : "회원",
+        "payment" : "2022-7-20"
     }
 ]
