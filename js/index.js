@@ -11,7 +11,7 @@ let fourTop = section[3].offsetTop;
 // 헤더 불러옴
 let menu = document.querySelector('.header_Y');
 let scrollTop = window.scrollY;
-
+let menu2 = document.querySelector('.header');
 // 라이트바 애니메이션
 let right = document.querySelector('#rightBar_Y').children;
 console.log(right[0]);
@@ -22,9 +22,13 @@ window.addEventListener('scroll', function () {
     scrollTop = window.scrollY;
     
     if (scrollTop > 6) {
-        menu.style.background = 'var(--bg-color)';
+        menu.style.background = 'linear-gradient(to bottom, rgba(41, 40, 38, 1), rgba(41,40,38, 0))';
+        // menu.style.background = 'rgba(41, 40, 38, 0.7)';
+
     } else {
         menu.style.background = 'transparent';
+        menu.style.transition = 'all 1s linear 0s';
+
     }
 });
 
