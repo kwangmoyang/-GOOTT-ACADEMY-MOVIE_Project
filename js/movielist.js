@@ -17,9 +17,60 @@ let pageEndCount; //페이지 이동시 보여줄 마지막 배열번호
 let sortedJsonArray = []; //최종 소팅된 영화 데이터 들어가 있는 배열
 let currentPageNum = 1; //현재 페이지 번호
 
+let localStorageId;//로컬스토리지 이메일 저장할 변수
+let localStorageAuthority;//로컬스토리지 직책 저장할 변수
+let loginID = document.getElementById('loginID_C');//로그인 유저 이메일 표시할 스팬
+let loginAuth_C = document.getElementById('loginAuth_C');//로그인 유저 권한 표시할 스팬
+let loginPayment_C = document.getElementById('loginPayment_C');//로그인 유저 결제 기간 표시할 스팬
+let remainDays_C = document.getElementById('remainDays_C');//잔여일 계산
+let manageBtn_C = document.getElementById('manageBtn_C');//관리자만 사용 가능한 버튼
+let logoutBtn = document.getElementById('logoutBtn_C');//로그아웃 버튼
 window.onload = function () {
+    // console.log(localStorage);
+    if(localStorage.getItem('loginId')){
+        localStorageId = localStorage.getItem('loginId');
+        localStorageAuthority = localStorage.getItem('authority');
+        localStorageLoginPayment = localStorage.getItem('payment');
+
+        let date = new Date();
+        let date2 = new Date(localStorageLoginPayment);
+
+        let result_ = date2.getTime() - date.getTime();
+        result_ = ((((result_ / 1000) / 60 ) / 60 ) / 24);
+        let result = Math.ceil(result_) + "일 남았습니다.";
+
+        loginID.innerHTML = `${localStorageId}`;
+        loginAuth_C.innerHTML = `${localStorageAuthority}`;
+        loginPayment_C.innerHTML = `${localStorageLoginPayment}`;
+        
+        if(result_ > 0){
+            remainDays_C.innerHTML = result;
+        }
+        else{
+            alert('결재기간이 만료되었습니다. 결제후 이용해 주세요.');
+            location.href = 'signInUp.html';
+        }
+    }
+    else{
+        alert('로그인을 하셔야 서비스를 이용하실수 있습니다.');
+        location.href = 'signInUp.html';
+    }
+
+    //관리자 처리
+    if(localStorageAuthority == '관리자'){
+        manageBtn_C.style.display = 'inline-block';
+    }
+    else{
+        manageBtn_C.style.display = 'none';
+    }
     infinitySlide(); //메인 부분 무한 슬라이드
 }
+
+logoutBtn.addEventListener('click' , function(){
+    alert('로그아웃 합니다.');
+    localStorage.clear();
+    location.href = 'index.html';
+});
 
 /*장르,년도 선택후 버튼 클릭*/
 btnSelect_C.addEventListener('click', function () {
@@ -613,7 +664,7 @@ function doAjax() {
 }
 
 function drawArray() {
-
+    currentPageNum = 1; //07-23 02:46 최원석 수정
     if (sortedJsonArray.length > 10) {
         pageStartCount = 0;
         pageEndCount = 10;
@@ -820,7 +871,7 @@ function currentPageShow() {
     console.log(currentPageNum);
     let aPages = document.querySelectorAll('.aPages_C');
     let aPageSelect = document.getElementById(`aPage_C${currentPageNum}`);
-
+    // console.log(aPageSelect);
     for (item of aPages) {
         item.style.color = 'white';
         item.style.pointerEvents = 'auto';

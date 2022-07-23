@@ -99,26 +99,26 @@ a{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/img/section1.jpg);
+      ), url(../img/section1.jpg);
 }
 
 .two_Y{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/img/section2.jpg);
+      ), url(../img/section2.jpg);
 }
 .thr_Y{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/img/section3.jpg);
+      ), url(../img/section3.jpg);
 }
 .four_Y{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(/img/section4.jpg);
+      ), url(../img/section4.jpg);
 }
 
 /* 텍스트존 박스 설정 */
