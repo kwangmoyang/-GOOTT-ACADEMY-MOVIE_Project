@@ -15,7 +15,6 @@
     --width: 100%;
     --basic-color : white;
     /* --border-sample: 3px solid red; */
-    
 }  
 
 a{
@@ -55,25 +54,6 @@ a{
     margin-left: 40px;
 }
 
-/* right bar 디자인 */
-.rightBar_Y>ul{
-    list-style-type: none;
-    position: fixed;
-    z-index: 1000;
-    top: 50%;
-
-    right: 0.5vw; /*07-20 17:40 변경함*/
-    transform: translate(-50%,-50%);
-}
-.rightBar_Y>ul>li{
-    width: 25px;
-    height: 25px;
-    background-color: #F9D142;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    margin: 25px 15px;
-}
-
 
 /* 섹션 공통 사이즈 */
 .section_Y{
@@ -94,38 +74,23 @@ a{
 }
 /* 섹션별 이미지 삽입 */
 .one_Y{
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url(../img/section1.jpg);
-}
+      ), url(/img/section1.jpg); */
 
-.two_Y{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), url(../img/section2.jpg);
-}
-.thr_Y{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), url(../img/section3.jpg);
-}
-.four_Y{
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), url(../img/section4.jpg);
+      background-color: #292826;
 }
 
 /* 텍스트존 박스 설정 */
 .text-zone_Y{
-    width: 180vh;
-    text-align: center;
+    width: 150vh;
+    height: 300px;
+    /* text-align: center; */
     line-height: 10vh;
 
-    border: var(--border-sample);
+    /* border: var(--border-sample); */
+    border: 3px solid red;
     
     color: #F9D142;
     position: absolute;
@@ -134,35 +99,5 @@ a{
     transform: translate(-50%,-50%);
 }
 
-/* 텍스트 상세 사이즈 조절 */
-.text-zone_Y>h1{
-    font-size: 47px;
-}
-.text-zone_Y>p{
-    font-size: 20px;
-    line-height: 60px;
-}
-/* 아이콘 사이즈 조절 */
-.uil-arrow-circle-down_Y{
-    font-size: 50px;
-    line-height: 50px;
-    margin-top: 20px;
-    color: var(--bg2-color);
-}
-/* 네번째 아이콘 각도 조절 */
-#icon_change_Y{
-    transform: rotate(180deg);
-}
 
-/* 섹션버튼 */
-.text-zone_Y>button{
-    background-color: var(--bg2-color);
-    border: 0px;
-    width: 200px;
-    height: 45px;
-    cursor: pointer;
-    border: var(--border);
-    border-radius: var(--border-radius);
 
-    margin-top: 30px;
-}
