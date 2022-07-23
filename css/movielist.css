@@ -14,6 +14,10 @@
 .mainImgs_C {
     width: 100%;
     height: 100%;
+    position: relative;;
+}
+.mainImgs_C h1{
+    background-color: transparent;
 }
 
 .mainImg_C{
@@ -22,8 +26,18 @@
     object-fit: fill;
 }
 
-.selectContainer_C{
-    /* border: 3px solid red; */
+.mainImgsInner_C{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.selectContainer_C{/*섹션2 첫번째*/
+    height: 5%;
+    border: 1px solid orangered;
     padding-left: 1rem;
 }
 
@@ -40,9 +54,10 @@
 #btnSelect_C{
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 
-#movieContainer_C{
+#movieContainer_C{/*섹션2 두번째*/
     position: relative;
     width: 100%;
     /* height: 820px; */
@@ -50,8 +65,8 @@
     display: flex;
     /* justify-content: center; */
     flex-wrap: wrap;
-    /* border: 4px solid violet; */
-    padding:1rem;
+    border: 1px solid blueviolet;
+    /* padding:1rem; */
 }
 
 .poster_C{
@@ -76,7 +91,7 @@
     margin-right: 0.3rem;
     
     width: 19%;
-    height: 50%;
+    height: 49%;
     color: var(--colorYellow);
     padding: 0.5rem;
 }
@@ -120,6 +135,7 @@
     background-color: transparent;
     cursor: pointer;
     transition: .3s;
+    color: white;
 }
 
 .play_C:hover{
@@ -128,14 +144,15 @@
 
 
 
-#pageBtnContainer_C{
+#pageBtnContainer_C{ /*섹션2 세번째*/
     display: none;
-    /* border: 3px solid red; */
+    border: 1px solid orangered;
     color: white;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     /* display: flex;
     justify-content: center;
     align-items: center; */
+    height: 5%;
 }
 
 #pageBtnContainer_C a{
@@ -174,4 +191,54 @@
 #exit_C:hover{
     color: crimson;
     transform: scale(1.2,1.2);
+}
+
+#logoutBtn_C{
+    display: inline-block;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#manageBtn_C{
+    display: inline-block;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    display: none;
+}
+
+#logoutBtn_C:hover{
+    color: crimson;
+}
+
+#manageBtn_C:hover{ /*관리자만 있는 회원관리 버튼. 기능은 미구현 예정*/
+    color: crimson;
+}
+
+#loginID_C{/*07-23 최원석 추가*/
+    color: var(--colorYellow); 
+    font-size: 1.5rem;
+}
+
+#loginText_C{
+    color: white;
+    font-size: 1rem;
+}
+
+#loginAuth_C{
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+#loginPayment_C{
+    color: white;
+    font-size: 1rem;
+}
+
+#remainDays_C{
+    color: white;
+    font-size: 0.8rem;
 }

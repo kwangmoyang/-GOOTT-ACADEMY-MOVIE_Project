@@ -4,279 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/join_C.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <title>YELLOW BOX</title>
     <link rel="icon" href="./img/favicon.png">
-    <style>
-
-        :root{
-            --yello : #F9D142;
-            --black : #292826;
-        }
-
-        .loginDiv{
-            width: 600px;
-            height: 600px;
-            background-color: #4a4841;
-            margin: 100px auto;
-            padding: 1rem;
-        }
-
-        #joinForm{
-            border: 1px solid red;
-            padding: 1rem;
-        }
-
-        .formInputs{
-            display: inline-block;
-            width: 80%;
-            height: 50px;
-            border-radius: 4px;
-            background-color: var(--black);
-            color : var(--yello);
-            font-size: 1.2rem;
-            padding-left: 1rem;
-            margin: 0.5rem 0;
-        }
-
-        #submit{
-            display: block;
-            padding: 1rem;
-            border: 4px;
-            background-color: var(--black);
-            color: white;
-            margin: 0.5rem 0;
-        }
-
-        .formSpans{
-            display: block;
-            color: orange;
-        }
-
-        #emailBtn{
-            display: inline-block;
-            padding: 1rem;
-            border: 4px;
-            background-color: var(--black);
-            color: white;
-            margin: 0.5rem 0;
-        }
-
-      
-
-    </style>
 </head>
 <body>
     <div class="loginDiv">
-        <button id="emailBtn">이메일 중복 체크</button>
-        <form action="lay.html" method="get"  id="joinForm" onsubmit="return checkForm();">
-            <input type="email" name="" id="email" class="formInputs" placeholder="Email">
-            <span id="emailSpan" class="formSpans"></span>
-            
-            <input type="text" name="" id="nickname" class="formInputs" placeholder="Nickname">
-            <span id="nicknameSpan" class="formSpans"></span>
-            
-            <input type="password" name="" id="password1" class="formInputs" placeholder="password1">
-            <span id="password1Span" class="formSpans"></span>
-            
-            <input type="password" name="" id="password2" class="formInputs" placeholder="password2">
-            <span id="password2Span" class="formSpans"></span>
-            
+        <form action="signInUp.html" method="get"  id="joinForm" onsubmit="return checkForm();">
+            <div class="wrapInput">
+                <input type="email" name="" id="email" class="formInputs" placeholder="Email" autocomplete="off">
+                <ion-icon name="checkmark-outline" class="checkIcon"></ion-icon>
+                <div id="emailBtn">이메일 중복 체크</div>
+                <span id="emailSpan" class="formSpans"></span>
+            </div>
+            <div class="wrapInput">
+                <input type="text" name="" id="nickname" class="formInputs" placeholder="Nickname" autocomplete="off">
+                <ion-icon name="checkmark-outline" class="checkIcon"></ion-icon>
+                <span id="nicknameSpan" class="formSpans"></span>
+            </div>
+            <div class="wrapInput">
+                <input type="password" name="" id="password1" class="formInputs" placeholder="문자,숫자 포함 8자 이상 입력." autocomplete="new-password">
+                <ion-icon name="checkmark-outline" class="checkIcon"></ion-icon>
+                <span id="password1Span" class="formSpans"></span>
+            </div>
+            <div class="wrapInput">
+                <input type="password" name="" id="password2" class="formInputs" placeholder="비밀번호 확인" autocomplete="new-password">
+                <ion-icon name="checkmark-outline" class="checkIcon"></ion-icon>
+                <span id="password2Span" class="formSpans"></span>
+            </div>
             <input type="submit" value="Join" id="submit">
         </form>
 
         <button id="checkCurrent">현재상태 체크</button>
         
     </div>
-
-    <script>
-        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; //최소 8 자, 최소 하나의 문자 및 하나의 숫자
-        const emailPattern = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/; //이메일 
-        const whiteSpacePattern = /\s/g; //공백
-        
-        let emailBtn = document.getElementById('emailBtn');
-        let checkCurrent = document.getElementById('checkCurrent');
-
-        let email = document.getElementById('email');
-        let emailSpan = document.getElementById('emailSpan');
-        
-        let nickname = document.getElementById('nickname');
-        let nicknameSpan = document.getElementById('nicknameSpan');
-        
-        let password1 = document.getElementById('password1');
-        let password1Span = document.getElementById('password1Span');
-        
-        let password2 = document.getElementById('password2');
-        let password2Span = document.getElementById('password2Span');
-
-        let submit = document.getElementById('submit');
-
-        let isEmailDupCheck = false;
-        let isEmailCheck = false;
-        let isNickCheck = false;
-        let isPw1Check = false;
-        let isPw2Check = false;
-
-        checkCurrent.addEventListener('click' , function(){
-            console.log(`isEmailDupCheck : ${isEmailDupCheck}`);
-            console.log(`isEmailCheck : ${isEmailCheck}`);
-            console.log(`isNickCheck : ${isEmailDupCheck}`);
-            console.log(`isPw1Check : ${isPw1Check}`);
-            console.log(`isPw2Check : ${isPw2Check}`);
-            
-        })
-        
-        email.addEventListener('keyup' , function(){
-            if(this.value.length == 0){
-                emailSpan.innerHTML = '';
-                isEmailCheck = false;
-            }
-            else if(whiteSpacePattern.test(this.value) == true){
-                emailSpan.innerHTML = '공백이 포함될수 없습니다.';
-                isEmailCheck = false;
-            }
-            else if(emailPattern.test(this.value) == true){
-                emailSpan.innerHTML = 'check';
-                isEmailCheck = true;
-            }
-            else if(emailPattern.test(this.value) == false){
-                emailSpan.innerHTML = '올바른 이메일 양식이 아닙니다.';
-                isEmailCheck = false;
-            }
-            else{
-                emailSpan.innerHTML = '심각한 에러 발생.';
-                isEmailCheck = false;
-            }
-        });
-
-        nickname.addEventListener('keyup' , function(){
-            if(this.value.length != 0){
-                nicknameSpan.innerHTML = 'check';
-                isNickCheck = true;
-            }
-            else if(this.value.length == 0){
-                nicknameSpan.innerHTML = '';
-                isNickCheck = false;
-            }
-            else{
-                nicknameSpan.innerHTML = '심각한 에러 발생.';
-                isNickCheck = false;
-            }
-        });
-
-        password1.addEventListener('keyup' , function(){
-            if(this.value.length == 0){
-                password1Span.innerHTML = '최소 8 자, 최소 하나의 문자 및 하나의 숫자';
-                password2Span.innerHTML = '';
-                isPw1Check = false;
-            }
-            else if(whiteSpacePattern.test(this.value) == true){
-                password1Span.innerHTML = '공백이 포함될수 없습니다.';
-                isPw1Check = false;
-            }
-            else if(passwordPattern.test(this.value) == true){
-                password1Span.innerHTML = 'check';
-                isPw1Check = true;
-            }
-            else if(passwordPattern.test(this.value) == false){
-                password1Span.innerHTML = '올바른 비밀번호 양식이 아닙니다.';
-                isPw1Check = false;
-            }
-            else{
-                password1Span.innerHTML = '심각한 에러 발생.';
-                isPw1Check = false;
-            }
-        });
-
-        password2.addEventListener('keyup' , function(){
-            let pw1Text = password1.value;
-            if(isPw1Check && (pw1Text == this.value)){
-                password2Span.innerHTML = 'check';
-                isPw2Check = true;
-            }
-            else if(isPw1Check == false){
-                password2Span.innerHTML = '';
-                isPw2Check = false;
-            }
-            else if(pw1Text.length == 0){
-                password2Span.innerHTML = '';
-                isPw2Check = false;
-            }
-            else if(isPw1Check && (pw1Text != this.value)){
-                password2Span.innerHTML = '비밀번호가 일치하지 않습니다.';
-                isPw2Check = false;
-            }
-            else{
-                password2Span.innerHTML = '심각한 오류 발생.';
-                isPw2Check = false;
-            }
-        })
-
-        function checkForm(){
-            if(isEmailCheck == false){
-                alert('이메일을 입력해 주세요.');
-                return false;
-            }
-            else if(isEmailDupCheck == false){
-                alert('이메일 중복 체크를 해주세요.');
-                return false;
-            }
-            else if(isNickCheck == false){
-                alert('닉네임을 입력해 주세요.');
-                return false;
-            }
-            else if(isPw1Check == false){
-                alert('비밀번호를 입력해 주세요.');
-                return false;
-            }
-            else if(isPw2Check == false){
-                alert('비밀번호 확인을 해주세요.');
-                return false;
-            }
-            else if(isEmailCheck == true && isEmailDupCheck == true && isNickCheck == true && isPw1Check == true && isPw2Check == true){
-                alert('회원가입을 축하드립니다.');
-                return true;
-            }
-            else{
-                alert('심각한 에러 발생.');
-                return false;
-            }
-        }
-
-        emailBtn.addEventListener('click' , function(){
-            
-            console.log('이메일체크 시작');
-            let xhr = new XMLHttpRequest();
-            xhr.open('get','./json/member.json')
-            xhr.send();
-
-            xhr.onreadystatechange = function(){
-                if(xhr.readyState == 4 && xhr.status == 200){
-                    console.log('member.json 연결 성공');
-                    
-                    let jsonObj = JSON.parse(xhr.response);
-                    console.log('받아온 member제이슨 객체로 변환');
-                    console.log(jsonObj);
-                    console.log(`현재 email : ${email.value}`);
-                    for(let i = 0; i < jsonObj.length; i++){
-                        if(jsonObj[i].email == email.value){
-                            alert('중복된 아이디 입니다.');
-                            isEmailDupCheck = false;
-                            return;
-                        }
-                    }
-                    alert('사용가능한 아이디 입니다.')
-                    isEmailDupCheck = true;
-                }
-                else{
-                    console.log('member.json 연결 실패');
-                }
-            }
-        });
-
-       
-        
-       
-
-    </script>
+    <script src="./js/join_C.js"></script>
 </body>
 </html>

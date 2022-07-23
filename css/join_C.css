@@ -1,0 +1,77 @@
+.loginDiv{
+    width: 600px;
+    height: 600px;
+    background-color: #34332e;
+    margin: 100px auto;
+    padding: 1rem;
+}
+
+#joinForm{
+    
+    border: 1px solid red;
+    padding: 1rem;
+}
+
+.formInputs{
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--colorBlack);
+    color : var(--colorYellow);
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    margin: 0.5rem 0;
+    transition: .5s;
+}
+
+#submit{
+    display: block;
+    padding: 1rem;
+    color: white;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+
+.formSpans{
+    display: block;
+    color: white;
+    font-size: 0.8rem;
+}
+
+#emailBtn{
+    display: inline;
+    padding: 0.5rem;
+    border: 4px;
+    color: white;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: .5s;
+}
+
+#emailBtn:hover{
+    color: orangered;
+}
+
+.wrapInput{
+    position: relative;
+}
+
+.checkIcon{
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    color : rgb(13, 138, 13);
+    background-color: transparent;
+    transition: .5s;
+    opacity: 0;
+}
+
+#submit:hover{
+    color: orangered;
+}
+
+
