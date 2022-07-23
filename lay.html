@@ -9,54 +9,44 @@
     <link rel="stylesheet" href="./css/lay.css">
     <link rel="stylesheet" href="./css/movielist.css">
     <link rel="stylesheet" href="./css/header.css">
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 
 <body>
     <div id="container_S">
-            <div id="header_P">
-                <header>
-                    <div class="con_P">
-                    <div class="logo_P">
-                        <a href="index.html"><img src="./img/mainlogo_4.png" alt=""></a>
-                    </div>
-                    
-                    <nav class="menu_P">
-                        <ul id="menuin_P">
-                            <li class="category_P"><a href="#section2_S">카테고리</a></li>
-                            <li class="drama_P"><a href="#section3_K">드라마</a></li>
-                          </ul> 
-                    </nav>
-                    
-                    <div class="search_P">
+        <div id="header_S">
+            <nav class="nav_P">
+                <div class="logo_P">
+                    <a href="index.html"><img src="./img/mainlogo_4.png" alt=""></a>
+                </div>
+                <div class="menu_P">
+                    <li><a href="#genreSelect_C">카테고리</a></li>
+                    <li><a href="#section3_K">드라마</a></li>
+                </div>
+                <div class="serach_P">
                         <input type="text" placeholder="영화 제목을 검색하세요."><ion-icon name="search-outline" id="sicon_P"></ion-icon>
-                    </div>
-    
-                    <div class="login_P">
-                        <ion-icon name="person-circle-outline" id="licon_P" ></ion-icon>
-                    </div>
                 </div>
-                </header>
-            </div>
+                <div class="loginmenu_P">
+                    <ul class="login_P">
+                       <li class="dropdown">
+                       <ion-icon name="person-circle-outline" class="loginicon_P" ></ion-icon>
+                            <ul class="dropdown-menu_P">
+                              <li class="dropdown-item_P"><a href="#">프로필 관리</a></li>
+                                <li class="dropdown-item_P"><a href="#">계정</a></li>
+                                <li class="dropdown-item_P"><a href="#">고객센터</a></li>
+                            </ul>
+                        </li>
+                      <li>
+                      </li>
+                    </ul>
+                </div>
+        
+        
+            </nav>
+        </div>
         <div id="mainView_S">
-            <div id="section1_S" class="section_S">
-                <div class="mainImgCon_C">
-                    <div class="mainImgDiv_C">
-                        <div class="mainImgs_C">
-                            <img src="./img/portfolio-1.jpg" alt="" class="mainImg_C">
-                        </div>
-                        <div class="mainImgs_C">
-                            <img src="./img/portfolio-2.jpg" alt="" class="mainImg_C">
-                        </div>
-                        <div class="mainImgs_C">
-                            <img src="./img/portfolio-3.jpg" alt="" class="mainImg_C">
-                        </div>
-                        <div class="mainImgs_C">
-                            <img src="./img/portfolio-4.jpg" alt="" class="mainImg_C">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="section1_S" class="section_S">섹션1</div>
             <div id="section2_S" class="section_S">
                 <div class="selectContainer_C">
                     <select name="" id="genreSelect_C">
