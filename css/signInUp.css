@@ -72,10 +72,10 @@
     margin-top: 1vw;
     /* 클릭시 메인페이지 링크 */
 }
-#signUp_S {
+/* #signUp_S {
     width: 6vw;
     height: 6vh;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     background-color:#F9D142;
     border-radius: 5px;
     place-self: center;
@@ -87,9 +87,9 @@
     font-size: 1em;
     margin-right: 3vw;
     margin-top: 1vw;
-    /* 클릭시 모달창 띄우거나 따로 회원가입 페이지로 이동 예정, 회의때 얘기해보고 결정 */
-    /* 깔끔한 구성을 위해 mainView 부분 하단으로 회원가입 이동 건의 후 수정 예정 */
-}
+    클릭시 모달창 띄우거나 따로 회원가입 페이지로 이동 예정, 회의때 얘기해보고 결정
+    깔끔한 구성을 위해 mainView 부분 하단으로 회원가입 이동 건의 후 수정 예정
+} */
 
 #main_S {
     width: 70%;
@@ -129,17 +129,121 @@
     transition: 0.5s;
     line-height: 6vh;
     font-size: 1.1em;
-    padding: 1vh;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 2vh;
+    display: grid;
+    grid-template-areas: 
+    "iconn textt";
 }
 
 .viewStyle_S:hover {
     width: 35vw;
     height: 8vh;
-    margin-bottom: 1vh;
+    /* margin-bottom: 1vh; */
     cursor: pointer;   
     transform: scale(1.05);
+}
+#yellowIcon_S {
+    width: 5vw;
+    height: 8vh;
+    grid-area: iconn;
+    /* border: 1px solid red; */
+    position: absolute;
+    justify-items: center;
+}
+#yellowIcon_S img {
+    width: 5vw;
+    height: 8vh;
+}
+
+#yellowText_S {
+    width: 35vw;
+    height: 8vh;
+    grid-area:textt;
+    /* border: 1px solid red; */
+    line-height: 8vh;
+}
+
+#naverIcon_S {
+    width: 5vw;
+    height: 8vh;
+    grid-area: iconn;
+    /* border: 1px solid red; */
+    position: absolute;
+    justify-items: center;
+    
+}
+#naverIcon_S img {
+    margin-top: 2.5vh;
+}
+#naverText_S {
+    width: 35vw;
+    height: 8vh;
+    grid-area:textt;
+    /* border: 1px solid red; */
+    line-height: 8vh;
+    
+}
+
+#kakaoIcon_S {
+    width: 5vw;
+    height: 8vh;
+    grid-area: iconn;
+    /* border: 1px solid red; */
+    position: absolute;
+    justify-items: center;
+}
+#kakaoIcon_S img {
+    margin-top: 2.5vh;
+}
+#kakaoText_S {
+    width: 35vw;
+    height: 8vh;
+    grid-area:textt;
+    /* border: 1px solid red; */
+    line-height: 8vh;
+}
+
+#faceIcon_S {
+    width: 5vw;
+    height: 8vh;
+    grid-area: iconn;
+    /* border: 1px solid red; */
+    position: absolute;
+    justify-items: center;
+}
+#faceIcon_S img {
+    margin-top: 2.5vh;
+}
+
+#faceText_S {
+    width: 35vw;
+    height: 8vh;
+    grid-area:textt;
+    /* border: 1px solid red; */
+    line-height: 8vh;
+}
+
+#appleIcon_S {
+    width: 5vw;
+    height: 8vh;
+    grid-area: iconn;
+    /* border: 1px solid red; */
+    position: absolute;
+    justify-items: center;
+}
+
+#appleIcon_S img {
+    margin-top: 2.5vh;
+}
+
+#appleText_S {
+    width: 35vw;
+    height: 8vh;
+    grid-area:textt;
+    /* border: 1px solid red; */
+    line-height: 8vh;
 }
 
 #vsYB_S:hover {
@@ -161,6 +265,28 @@
 #vsAP_S:hover {
     border: 0.1vw solid rgb(195, 195, 199);
     color: rgb(195, 195, 199);
+}
+
+#viewHelp_S {
+    height: 2vh;
+    line-height: 2vh;
+    text-align: center;
+    color: rgb(93, 93, 93);
+    font-size: 1em;
+    font-weight: bolder;
+    /* border: 1px solid blue; */
+    margin-top: 8vh;
+}
+#viewHelp_S span {
+    text-decoration: underline;
+    color: gray;
+    cursor: pointer;
+}
+
+#viewHelp_S span:hover {
+    text-decoration: underline;
+    color: lightgray;
+    cursor: pointer;
 }
 
 #footer_S {
