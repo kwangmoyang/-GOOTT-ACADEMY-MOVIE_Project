@@ -1,0 +1,47 @@
+.loginDiv {
+    width: 600px;
+    height: 600px;
+    background-color: #34332e;
+    margin: 100px auto;
+    padding: 1rem;
+}
+
+#joinDiv {
+
+    border: 1px solid red;
+    padding: 1rem;
+}
+
+.formInputs {
+    display: inline-block;
+    width: 400px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--colorBlack);
+    color: var(--colorYellow);
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    margin: 0.5rem 0;
+    transition: .5s;
+    
+}
+
+#submit {
+    display: block;
+    padding: 1rem;
+    color: white;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+#submit:hover{
+    color: orangered;
+}
+
+.formSpans {
+    display: block;
+    color: white;
+    font-size: 0.8rem;
+}
