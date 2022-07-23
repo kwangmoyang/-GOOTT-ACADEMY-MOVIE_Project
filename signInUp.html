@@ -12,12 +12,12 @@
     <div id="containe_S">
         <div id="background_S"></div>
         <div id="header_S">
-            <div id="headerLogo_S" onclick="location.href='index.html'">
-                <img src="./img/mainlogo_4.png" id="Logo_S">
+            <div id="headerLogo_S">
+                <a href="index.html"><img src="./img/mainlogo_4.png" id="Logo_S"></a>
             </div>
             <div id="headerSignUp_S">
                 <div id="signUp_S">
-                    <span>회원가입</span>
+                    <a href="join.html" style="text-decoration: none; color: #292826;"><span>회원가입</span></a><!--07-22 23:37 최원석 수정-->
                 </div>
             </div>
         </div>
@@ -30,6 +30,7 @@
                     <div id="yellowIcon_S"><img src="./img/SYMBOL.png" alt=""></div>
                     <div id="yellowText_S"><span>YELLOW BOX ID로 시작하기</span></div>
                 </div>
+
                 <!-- 아래 네개의 버튼은 불필요하므로 각 사이트 OPEN API 사용하지 않는 이상 따로 링크하지는 않을 예정입니다-->
                 <div class="viewStyle_S" id="vsNA_S" onclick="location.href='#'">
                     <div id="naverIcon_S"><img src="./img/iconNaver.svg" alt=""></div>
@@ -57,5 +58,15 @@
                 siginIn,signUp,helper page 전체 동일 -->
         <div id="footerFilter_S"></div>
     </div>
+
+    <script>
+        let test_C = document.querySelectorAll('.viewStyle_S');
+        for(item of test_C){
+            item.addEventListener('click' , function(){
+                console.log(`${this.children[0].innerText} Click`);
+                location.href = 'login.html';
+            });
+        }
+    </script>
 </body>
 </html>
