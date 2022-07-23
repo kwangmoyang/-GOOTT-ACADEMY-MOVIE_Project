@@ -24,25 +24,38 @@
         <div id="main_S">
             <div id="mainView_S">
                 <div id="viewText_S">반가워요! <br> 계정을 선택해주세요.</div>
-                <div class="viewStyle_S" id="vsYB_S">
-                    <!-- 메인로고 심볼만 있는거 받아서 처리 -->
-                    <span>YELLOW BOX ID로 시작하기</span>
+                <!-- signIn 페이지 생성 후 링크 연결 예정 -->
+                <!-- signIn 페이지 내부에 회원가입으로 연결되는 버튼 링크 예정-->
+                <div class="viewStyle_S" id="vsYB_S"  onclick="location.href='signIn.html'">
+                    <div id="yellowIcon_S"><img src="./img/SYMBOL.png" alt=""></div>
+                    <div id="yellowText_S"><span>YELLOW BOX ID로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsNA_S">
-                    <span class="test_C">네이버로 시작하기</span>
+
+                <!-- 아래 네개의 버튼은 불필요하므로 각 사이트 OPEN API 사용하지 않는 이상 따로 링크하지는 않을 예정입니다-->
+                <div class="viewStyle_S" id="vsNA_S" onclick="location.href='#'">
+                    <div id="naverIcon_S"><img src="./img/iconNaver.svg" alt=""></div>
+                    <div id="naverText_S"><span>네이버로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsKA_S">
-                    <span class="test_C">카카오로 시작하기</span>
+                <div class="viewStyle_S" id="vsKA_S" onclick="location.href='#'">
+                    <div id="kakaoIcon_S"><img src="./img/iconKakao.svg" alt=""></div>
+                    <div id="kakaoText_S"><span>카카오로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsFB_S">
-                    <span class="test_C">페이스북으로 시작하기</span>
+                <div class="viewStyle_S" id="vsFB_S" onclick="location.href='#'">
+                    <div id="faceIcon_S"><img src="./img/iconFace.svg" alt=""></div>
+                    <div id="faceText_S"><span>페이스북으로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsAP_S">
-                    <span class="test_C">Apple로 시작하기</span>
+                <div class="viewStyle_S" id="vsAP_S" onclick="location.href='#'">
+                    <div id="appleIcon_S"><img src="./img/iconApple.svg" alt=""></div>
+                    <div id="appleText_S"><span>Apple로 시작하기</span></div>
                 </div>
+                <!-- helper 페이지 생성 후 링크 연결 예정 -->
+                <!-- helper 페이지에 ID찾기, PW찾기, 회원가입 창 구현 예정입니다 -->
+                <div id="viewHelp_S">도움이 필요하신가요? &nbsp; <span  onclick="location.href='helper.html'"> 아이디 / 비밀번호 찾기</span></div>
             </div>
         </div>
         <div id="footer_S"></div>
+        <!-- 푸터 디자인은 수진이 작업끝나면 받아서 적용시키겠습니다
+                siginIn,signUp,helper page 전체 동일 -->
         <div id="footerFilter_S"></div>
     </div>
 
