@@ -1,0 +1,66 @@
+#section3_K {
+    width: 70%; /*70vw;*/
+    height: 60vh;
+    grid-area: sec3;
+    border: 1px solid red;
+    overflow: hidden;
+}
+.dramaView_K{
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+.dramaImgDiv_K {
+    width: 800%;
+    height: 100%;
+    display: flex;
+    /* overflow: hidden; */
+}
+/* 드라마 포스터 및 소개글 setInterver 사용하여 전환하기 위한 구역 */
+.dramaTerritory_K {
+    width: 69vw;
+    height: 60vh;
+    display: flex;
+}
+/* 드라마 포스터 구역 */
+.poster_K{
+    width: 22vw;
+    height: 60vh;
+    /* border: 1px solid yellow; */
+}
+.poster_K > img{
+    width: 21vw;
+    height: 58vh;
+    margin: 1vh 0 1vh 0.5vw;
+    border-radius: 5px;
+}
+/* 드라마 소개글 구역 */
+.content_K{
+    width: 47vw;
+    height: 60vh;
+    color: white;
+    padding: 1vw 2vw 1vw 2vw;
+}
+/* 드라마 제목 구역 */
+.content_K > h1{
+    font-size: 70px;
+    margin: 8vh 0;
+}
+.content_K > p{
+    margin: 1vh 0;
+}
+/* 드라마 연령 표기 구역 */
+.content_K > p > span{
+    width: 5vw;
+    height: 3vh;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 3.5vh;
+    margin-bottom: 1vh;
+    background-color: #F9D142;
+    color: #292826;
+}
+.same_K{
+    color: #646464;
+}
