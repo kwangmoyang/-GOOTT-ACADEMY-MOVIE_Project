@@ -2,20 +2,18 @@ let dramaImgDiv_K = document.querySelector('.dramaImgDiv_K');
 let firstdrama = dramaImgDiv_K.firstElementChild.cloneNode(true);
 dramaImgDiv_K.appendChild(firstdrama);
 
-// JS 이용해서 첫번째구역 마지막에 추가는 되었으나
-// 슬라이드 함수 작동안됨... 
 
 function dramaSlide() {
 
     let dramaIndex = 0;
-    setInterval(function () {
+    start = setInterval(function () {
 
         dramaImgDiv_K.style.transition = '0.5s';
-        dramaImgDiv_K.style.transform = `translateX(${-12.5 * (dramaIndex + 1)}%)`;
+        dramaImgDiv_K.style.transform = `translateX(${-(100 / 8) * (dramaIndex + 1)}%)`;
 
         dramaIndex++;
 
-        if (dramaIndex == 8) {
+        if (dramaIndex == 7) {
             setTimeout(function () {
                 dramaImgDiv_K.style.transition = '0s';
                 dramaImgDiv_K.style.transform = 'translateX(0)';
@@ -23,5 +21,25 @@ function dramaSlide() {
             dramaIndex = 0;
         }
 
-    }, 3 * 1000);
+    }, 4 * 1000);
 }
+dramaSlide();
+
+// 화면에 마우스 올렸을때 멈추는거까진 작동했으나
+// 마우스 떼면 전에꺼로 돌아감 프로퍼티 추적해서 수정예정 
+
+let slideStop = document.querySelector('.dramaImgDiv_K'); 
+// console.log(slideStop);
+
+slideStop.addEventListener('mouseover',function(){
+    // for(i=0; i.length < slideStop; i++);
+    console.log('오버');
+    clearInterval(start);
+});
+
+// slideStop.addEventListener('mouseout',function(){
+//     // for(i=0; i.length < slideStop; i++);
+//     setInterval(dramaSlide());
+//     console.dir('아웃');
+// });
+
