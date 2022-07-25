@@ -8,22 +8,24 @@
 .dramaView_K{
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
+    /* overflow: hidden;*/ 
 }
+/* 드라마 영역 setInterver 사용하여 전환하기 위한 구역 */
 .dramaImgDiv_K {
     width: 800%;
     height: 100%;
     display: flex;
     /* overflow: hidden; */
 }
-/* 드라마 포스터 및 소개글 setInterver 사용하여 전환하기 위한 구역 */
+/* 드라마 포스터 및 내용 묶기위한 div */
 .dramaTerritory_K {
-    /* width: 69vw; */
-    width: 100%; /*이거 수정하세요!*/
+    /* 부모요소에 % 단위를 써서 vw 단위 적용시 슬라이드 진행될수록
+    점점 왼쪽 공백이 늘어남. 단위 통일로 공백 없앰 */
+    width: 100%; /*69vw;*/
     height: 60vh;
     display: flex;
 }
-/* 드라마 포스터 구역 */
+/* 드라마 포스터 구역 */ 
 .poster_K{
     width: 22vw;
     height: 60vh;
@@ -32,10 +34,10 @@
 .poster_K > img{
     width: 21vw;
     height: 58vh;
-    margin: 1vh 0 1vh 0.5vw;
+    margin: 1vh 0.5vw;
     border-radius: 5px;
 }
-/* 드라마 소개글 구역 */
+/* 드라마 내용 구역 */
 .content_K{
     width: 47vw;
     height: 60vh;
