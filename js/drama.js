@@ -21,6 +21,7 @@ function dramaSlide() {
             dramaIndex = 0;
         }
 
+
     }, 4 * 1000);
 }
 dramaSlide();
