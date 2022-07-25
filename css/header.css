@@ -89,6 +89,9 @@ header{
     font-size: 35px;
     line-height: 50px;
     float:inline-end;
+    position: relative; /*07-24 최원석 수정*/
+    display: flex;  /*07-24 최원석 수정*/
+    align-items: center;    /*07-24 최원석 수정*/
     
 }
 

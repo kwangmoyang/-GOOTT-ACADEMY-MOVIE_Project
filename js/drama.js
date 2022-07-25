@@ -25,17 +25,21 @@ function dramaSlide() {
 }
 dramaSlide();
 
-let slideStop = document.querySelector('.dramaImgDiv_K');
-console.log(slideStop);
+// 화면에 마우스 올렸을때 멈추는거까진 작동했으나
+// 마우스 떼면 전에꺼로 돌아감 프로퍼티 추적해서 수정예정 
+
+let slideStop = document.querySelector('.dramaImgDiv_K'); 
+// console.log(slideStop);
 
 slideStop.addEventListener('mouseover',function(){
     // for(i=0; i.length < slideStop; i++);
-    console.log('test1');
+    console.log('오버');
     clearInterval(start);
 });
 
-slideStop.addEventListener('mouseout',function(){
-    // for(i=0; i.length < slideStop; i++);
-    console.log('test2');
-    setInterval(dramaSlide([1]));
-});
+// slideStop.addEventListener('mouseout',function(){
+//     // for(i=0; i.length < slideStop; i++);
+//     setInterval(dramaSlide());
+//     console.dir('아웃');
+// });
+

@@ -13,7 +13,7 @@
 /* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
 #container_S {
     border: 1px solid red;
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-areas:
     "header"
