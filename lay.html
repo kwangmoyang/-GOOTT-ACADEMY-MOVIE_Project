@@ -18,7 +18,6 @@
     <div id="container_S">
             <div id="header_P">
                 <header>
-                    <div class="con_P">
                     <div class="logo_P">
                         <a href="index.html"><img src="./img/mainlogo_4.png" alt=""></a>
                     </div>
@@ -30,21 +29,26 @@
                           </ul> 
                     </nav>
                     
-                    <div class="search_P">
-                        <input type="text" placeholder="영화 제목을 검색하세요."><ion-icon name="search-outline" id="sicon_P"></ion-icon>
+                    <div class="searchBox_P">
+                        <div class="search_P">
+                            <input class="searchTxt_P" type="text" placeholder="제목을 검색하세요.">
+                          <a class="searchBtn_P" href=""><ion-icon name="search-outline" id="sicon_P"></ion-icon></a>
+                        </div>
                     </div>
+                    <!-- <div class="search_P">
+                        <input type="text" placeholder="제목을 검색하세요."><ion-icon name="search-outline" id="sicon_P"></ion-icon>
+                    </div> -->
     
-                    <div class="login_P">
-                        <ion-icon name="person-circle-outline" id="licon_P" ></ion-icon>
-                        <span id="loginID_C"></span>
-                        <span id="loginText_C">님 환영합니다.</span>
-                        <span id="loginAuth_C"></span>
-                        <span id="loginPayment_C"></span>
-                        <span id="remainDays_C"></span>
-                        <button id="logoutBtn_C">로그아웃</button>
-                        <button id="manageBtn_C">회원관리</button>
-                    </div>
-                </div>
+                    <div class="dropdown_P">
+                        <ion-icon name="person-circle-outline" class="loginicon_P"  onclick="dp_menu()"></ion-icon>
+                          <div style="display: none;" id="drop-content_P">
+                            <ul class="drop-contentul_P">
+                              <li class="drop-contentli1_P"><a hreaf='#'><ion-icon name="settings-outline" class="dropicon_P"></ion-icon> 프로필 관리</a></li>
+                              <li class="drop-contentli2_P"><a hreaf='#'><ion-icon name="help-circle-outline" class="dropicon_P"></ion-icon> QnA</a></li>
+                              <li class="drop-contentli3_P"><a hreaf='#'><ion-icon name="exit-outline" class="dropicon_P"></ion-icon> 로그아웃</a></li>
+                            </ul>
+                          </div>
+                      </div>
                 </header>
             </div>
         <div id="mainView_S">
@@ -240,5 +244,6 @@
     </div>
     <script src="./js/movielist.js"></script>
     <script src="./js/drama.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>
