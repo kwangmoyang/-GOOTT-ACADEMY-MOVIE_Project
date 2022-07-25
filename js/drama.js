@@ -11,11 +11,11 @@ function dramaSlide() {
     setInterval(function () {
 
         dramaImgDiv_K.style.transition = '0.5s';
-        dramaImgDiv_K.style.transform = `translateX(${-12.5 * (dramaIndex + 1)}%)`;
+        dramaImgDiv_K.style.transform = `translateX(${-(100 / 8) * (dramaIndex + 1)}%)`;
 
         dramaIndex++;
 
-        if (dramaIndex == 8) {
+        if (dramaIndex == 7) {
             setTimeout(function () {
                 dramaImgDiv_K.style.transition = '0s';
                 dramaImgDiv_K.style.transform = 'translateX(0)';
@@ -25,3 +25,5 @@ function dramaSlide() {
 
     }, 3 * 1000);
 }
+
+dramaSlide();
