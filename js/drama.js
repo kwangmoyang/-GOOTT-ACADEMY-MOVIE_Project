@@ -22,26 +22,27 @@ function dramaSlide() {
             }, 501)
             dramaIndex = 0;
         }
-
-    }, 4 * 1000);
-    
-   
+    }, 2.5 * 1000);
 }
 dramaSlide();
 
-slideStop.addEventListener('mouseenter',function(){
+
+// 마우스 올렸을때 영역 정지
+
+slideStop.addEventListener('mouseenter',function(){ // mouseover
+    // mouseover는 직접 이벤트를 걸지않은 자식요소에 마우스 포인터가 와도 발생
+    // mouseenter는 오로지 자기 자신에게 마우스 포인터가 와야만 발생
     // for(i=0; i.length < slideStop; i++);
-    
-    console.log('오버');
+    // console.log('오버');
     tempDramaIndex = dramaIndex;
     clearInterval(start);
 });
 
-slideStop.addEventListener('mouseleave',function(){
-    // for(i=0; i.length < slideStop; i++);
-  
+// 마우스 떼었을때 영역 재실행
 
-       dramaIndex = tempDramaIndex;
+slideStop.addEventListener('mouseleave',function(){ // mouseout
+    // for(i=0; i.length < slideStop; i++);
+    dramaIndex = tempDramaIndex;
         start = setInterval(function () {
     
             dramaImgDiv_K.style.transition = '0.5s';
@@ -57,15 +58,10 @@ slideStop.addEventListener('mouseleave',function(){
                 dramaIndex = 0;
             }
     
-        }, 4 * 1000);
-        console.dir('아웃');
-        
-    });
+        }, 2.5 * 1000);
+        // console.dir('아웃');
 
-// 화면에 마우스 올렸을때 멈추는거까진 작동했으나
-// 마우스 떼면 전에꺼로 돌아감 프로퍼티 추적해서 수정예정 
-
-// console.log(slideStop);
+});
 
 
-
+// 22.07.25 코드 수정
