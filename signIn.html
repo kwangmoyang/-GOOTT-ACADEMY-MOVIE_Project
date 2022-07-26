@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yellow Box</title>
+    <link rel="stylesheet" href="./css/signIn.css">
+    <link rel="icon" href="./img/favicon.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
+
 <body>
-    <!-- 로그인 페이지 작성 예정입니다 7.24 작업시작입니다 
-        signInUp 페이지에서 Yellow Box ID로 시작하기 를 누르면 현재 사이트로 링크될 예정입니다-->
-        <h1>로그인 페이지 작성 예정입니다</h1>
+    <div id="container_S">
+        <div id="background_S"></div>
+        <div id="header_S">
+            <div id="headerLogo_S">
+                <a href="index.html"><img src="./img/mainlogo_4.png" id="Logo_S"></a>
+            </div>
+        </div>
+        <div id="mainDiv_S">
+            <div id="viewDiv_S">
+                <span id="loginText_S">로그인</span>
+                <div id="viewInput_S">
+                    <div id="wrapInput">
+                        <input type="email" name="" id="email" placeholder="이메일 (example@gmail.com)" autocomplete="off">
+                        <span id="emailSpan" class="formSpans"></span>
+                    </div>
+                    <div id="wrapInput">
+                        <input type="password" name="" id="password" class="formInputs" placeholder="비밀번호"
+                            autocomplete="new-password">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        <span id="password1Span" class="formSpans"></span>
+                    </div>
+                </div>
+                <div id="viewFooter_S">
+                    <button id="submit">로그인</button>
+                    <span id="helper_S" onclick="location.href='helper.html'">도움이 필요하신가요?</span>
+                    <br>
+                    <span id="signUp_S">Yellow Box 회원이 아닌가요? </span>
+                    <span id="signUpLink_S" onclick="location.href='signUp.html'"> 지금 가입하세요!</span>
+                </div>
+                
+            </div>
+        </div>
+        <div id="footer_S"></div>
+        <div id="footerFilter_S"></div>
+    </div>
+    <script src="./js/login_C.js"></script>
 </body>
+
 </html>

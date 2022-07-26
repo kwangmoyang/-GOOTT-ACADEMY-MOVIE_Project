@@ -2,8 +2,9 @@
     width: 600px;
     height: 600px;
     background-color: #34332e;
-    margin: 100px auto;
     padding: 1rem;
+    border: 1px solid red;
+    margin: 100px auto;
 }
 
 #joinDiv {
