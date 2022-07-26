@@ -27,7 +27,7 @@
                 <div id="viewText_S">반가워요! <br> 계정을 선택해주세요.</div>
                 <!-- signIn 페이지 생성 후 링크 연결 예정 -->
                 <!-- signIn 페이지 내부에 회원가입으로 연결되는 버튼 링크 예정-->
-                <div class="viewStyle_S" id="vsYB_S"  onclick="location.href='signIn.html'">
+                <div class="viewStyle_S" id="vsYB_S">
                     <div id="yellowIcon_S"><img src="./img/SYMBOL.png" alt=""></div>
                     <div id="yellowText_S"><span>YELLOW BOX ID로 시작하기</span></div>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <!-- helper 페이지 생성 후 링크 연결 예정 -->
                 <!-- helper 페이지에 ID찾기, PW찾기, 회원가입 창 구현 예정입니다 -->
-                <div id="viewHelp_S">도움이 필요하신가요? &nbsp; <span  onclick="location.href='helper.html'"> 아이디 / 비밀번호 찾기</span></div>
+                <div id="viewHelp_S">도움이 필요하신가요? &nbsp; <span  onclick="location.href='helper.html'"> 자주 찾는 질문</span></div>
             </div>
         </div>
         <div id="footer_S"></div>
@@ -61,11 +61,11 @@
     </div>
 
     <script>
-        let test_C = document.querySelectorAll('.viewStyle_S');
+        let test_C = document.querySelectorAll('#vsYB_S');
         for(item of test_C){
             item.addEventListener('click' , function(){
                 console.log(`${this.children[0].innerText} Click`);
-                location.href = 'login.html';
+                location.href = 'signIn.html';
             });
         }
     </script>

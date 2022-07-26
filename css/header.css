@@ -1,94 +1,158 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-@font-face {
-    font-family: 'GmarketSans';
-    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
-}
 #header_P {
-    background-color: #292826 ;
-    width: 100vw;
+    /* border: 1px  red; */
+    
+    width: 100%;
     height: 10vh;
-    /* grid-area: header; */
-}
-
-.logo_P{
-    float : left;
-    width: 15vw;
-    height: 10vh;
-}
-.logo_P img{
-    margin-left : 10px;
-    width : 90%;
-    height : 100%; 
+    
 }
 
 header{
-    height: 250px;
-}
-.con_P{
-    display: flex;
-    justify-content: space-around;
-}
-.menuin_P{
-    width : 25vw;
-    height : 10vh;
-    display: inline-block;
-    /* flex-direction : row;
-    justify-content: flex-start; */
-}
-
-.category_P{
-    display: inline-block;
-}
-.drama_P{
-    display: inline-block;   
-}
-
-.category_P>a {
-    text-decoration: none;
-  }
-
-
-  
-.menuin_P{
-    display: inline-block;
-    padding: 20px 50px;
-    color: white;
-  }
-
-
-.search_P {
-    position: relative;
-    width: 250px;
-  }
-  
-.search_P>input {
     width: 100%;
-    border: 1px solid #bbb;
-    border-radius: 8px;
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-  
-#sicon_P{
-    position : absolute;
-    width: 17px;
-    top: 10px;
-    right: 12px;
-    margin: 0;
-    display:inline-block;
-  }
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 
+header a{
+    text-decoration : none;
+}
+
+header li{
+    list-style: none;
+}
+
+
+/* 로고 */
+.logo_P{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.logo_P img{
+    margin-left : 20px;
+    /* margin-top: 10px; */
+    height : 80px; 
+}
+
+
+/* 메뉴 */
+.menu_P{
+    display:flex;
+    justify-content:left;
+    width: 20%;
+    height: 100%;
+    list-style: none;
+    padding-left:0;
+    /* border: 1px solid orange; */
+}
+
+.menu_P li{
+    display: inline-block;
+    margin: 30px 25px;
+    color: #F9D142;
+    list-style: none;
+}
+.category_P a{
+    color: #F9D142;
+    text-decoration : none;
+}
+
+.drama_P a{
+    color: #F9D142;  
+    text-decoration : none;  
+}
+
+
+/* 서치바 */
+.searchBox_P{
+    /* width:30%; */
+    width: 20%; /*07-26 최원석 수정*/
+    height: 100%;
+    display:flex;
+    /* border: 1px solid blue; */
+}
+.search_P {
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:55%;
+    margin-top:15px;
+    background: #292826;
+    border : 2px solid #F9D142;
+    border-radius: 10px;
+}
+.search_P>input {
+    width: 90%;
+    border: none;
+    background : none;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 3px;
+    font-size: 16px;
+}
+.searchBtn_P{
+    width: 10%;
+    margin-top: 17px;
+    text-decoration : none;
+    color: #dfdfdf;
+    font-size:18px;  
+}
+
+/* 아이콘 드롭다운 */
+.dropdown_P{
+    position: relative;
+    display: inline-block;
+    background-color:#292826;
+    width:15%;
+    height: 100%;
+    /* border: 1px solid violet; */
+}
+.loginicon_P{
+    margin-top: 15px;
+    padding: 10px 40px;
+    font-size:30px;
+    background-color:#292826;
+    color: #F9D142;
+}
+#drop-content_P{
+    position: absolute;
+    z-index: 1;
+}
+#drop-content_P a{
+    display:block;
+    font-size: 20px;
+    color: #F9D142;
+    text-decoration: none;
+    margin: 5px 10px;
+
+}
+.drop-contentul_P{
+    list-style : none;
+    background : #292826;
+    width:150px;
+}
+#drop-content_P>ul>li{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+#drop-content_P>ul>li>a{
+  color: #F9D142;
+  font-size:18px;
+}
+.dropicon_P{
+  color: #F9D142;
+}
+.drop-contentli1_P:hover{background-color:#808080 }
+.drop-contentli2_P:hover{background-color:#808080 }
+.drop-contentli3_P:hover{background-color:#808080 }
 
 
 .login_P{
-    font-size: 35px;
-    line-height: 50px;
-    float:inline-end;
+    width: 20%;
+    height: 100%;
     position: relative; /*07-24 최원석 수정*/
     display: flex;  /*07-24 최원석 수정*/
     align-items: center;    /*07-24 최원석 수정*/

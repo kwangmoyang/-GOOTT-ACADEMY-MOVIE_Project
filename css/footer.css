@@ -1,4 +1,4 @@
-
+/* footer 전체 컨테이너 */
 .footerContainer_K{
     width: 70%;
     height: 30vh;
@@ -6,7 +6,7 @@
     margin: auto;
     color: #ababab;
 }
-/* 공지사항란 글씨 슬라이드 영역 */
+/* 공지사항란 전체 영역 */
 .textRolling_k{
     width: 100%;
     height: 8vh;
@@ -16,7 +16,7 @@
     /* border: 1px solid yellow; */
 }
 .notice_K{
-    width: 8vw; 
+    width: 8vw;
     height: 7.5vh;
     line-height: 8vh;
     font-size: 1.3rem;
@@ -30,8 +30,8 @@
     width: 30vw;
     height: 7.5vh;
     overflow: hidden;
+    position: relative;
     /* border: 1px solid blue; */
-    /* cursor: pointer; */
 }
 .noticeSlide_K > ul{
     list-style: none;
@@ -42,7 +42,23 @@
     color: #F9D142;
     cursor: pointer;
 }
-/* 공지사항 오른쪽 로고 이미지 영역 */
+
+.noticeSlide_K li{
+    position: absolute;
+    /* animation-timing-function: ease; */
+    /* opacity: 1; */
+}
+
+/* 공지사항 옆 제목 슬라이드 키프레임 효과 영역 */
+.noticeSlide_K li.Slideone_K{
+    /* color: blue; */
+    animation: scroll-Up 3.5s linear infinite;
+}
+.noticeSlide_K li.Slidetwo_K{
+    /* color: red; */
+    animation: scroll-Up 3.5s linear infinite;
+}
+/* 공지사항 오른쪽 로고 이미지 div 영역 */
 .noticeLogo_K{
     width: 14vw;
     height: 7.5vh;
@@ -50,11 +66,45 @@
     right: 0;
     /* border: 1px solid blanchedalmond; */
 }
-.logo_k{
+/* 로고별 각각 클래스네임 이용하여 JS로 링크연결하기 위해
+css 효과 따로 부여함 */
+.logoface_K{
     width: 3vw;
     height: 3vh;
     margin-top: 2vh;
 }
+.logoface_K:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+.logoins_K{
+    width: 3vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+.logoins_K:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+.logotwi_K{
+    width: 3vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+.logotwi_K:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+.logoyou_K{
+    width: 3vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+.logoyou_K:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+
 /* 홈페이지 바닥글 영역 */
 .footerone_K{
     width: 100%;
@@ -67,9 +117,11 @@
 }
 .footerone_K > ul > li{
     float: left;
-    margin: 1vh 1.5vw 1vh 0;
+    margin: 1.5vh 1.5vw 1vh 0;
 }
 .footerone_K > ul > li:hover{
+    /* 마우스 오버시 트렌지션 효과 0725 */
+    transition: 3s;
     color: #F9D142;
     cursor: pointer;
 }
@@ -80,6 +132,18 @@
     padding: 1.5vh 0 0 0;
     font-size: 0.7rem;
     line-height: 3vh;
+    /* position: relative; */
     /* border: 1px solid yellow; */
 }
 
+/* 공지사항 옆 제목 슬라이드 키프레임 효과 영역 */
+@keyframes scroll-Up {
+    0%   { 
+
+    transform: translateY(60%);       
+    }
+    100% { 
+
+    transform: translateY(-60%); 
+    }
+}

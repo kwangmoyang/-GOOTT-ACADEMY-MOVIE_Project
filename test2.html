@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function naverAPI(){
+            return new Promise((resolve)=>{
+                let xhr = new XMLHttpRequest();
+                xhr.open('get' , "https://openapi.naver.com/v1/search/movie.json?query=%EC%A3%BC%EC%8B%9D");
+                xhr.setRequestHeader("X-Naver-Client-Id", "rQiLOIAHbt1yR1tpPnHx");
+                xhr.setRequestHeader("X-Naver-Client-Secret", "OKVyvclfLa");
+                xhr.send();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        console.log('gg');
+                        let naverReturn = JSON.parse(xhr.response);
+                        resolve(naverReturn);
+                        
+                    }
+                }
+            });
+        }
+
+        async function callNaverAPI(){
+            console.log('헤헤');
+            let naver = await naverAPI();
+            console.log(naver);
+        };
+
+        callNaverAPI();
+    </script>
+</body>
+</html>
