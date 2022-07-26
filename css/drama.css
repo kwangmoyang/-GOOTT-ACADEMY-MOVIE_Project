@@ -1,8 +1,9 @@
 #section3_K {
     width: 70%; /*70vw;*/
+    min-width: 1024px;/*07-25 최원석 수정*/
     height: 60vh;
     grid-area: sec3;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow: hidden;
 }
 .dramaView_K{

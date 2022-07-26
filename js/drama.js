@@ -6,8 +6,6 @@ let slideStop = document.querySelector('.dramaImgDiv_K');
 let tempDramaIndex; //임시변수
 let start; //인터벌 변수
 
-
-
 function dramaSlide() {
 
     start = setInterval(function () {
@@ -24,7 +22,6 @@ function dramaSlide() {
             }, 501)
             dramaIndex = 0;
         }
-
     }, 2.5 * 1000);
 }
 dramaSlide();
@@ -65,5 +62,6 @@ slideStop.addEventListener('mouseleave',function(){ // mouseout
         // console.dir('아웃');
 
 });
+
 
 // 22.07.25 코드 수정

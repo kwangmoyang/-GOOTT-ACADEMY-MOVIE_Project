@@ -6,7 +6,7 @@
 
 /* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
 #container_S {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     display: grid;
     grid-template-areas:
@@ -17,7 +17,7 @@
 /* 헤더입니다 로고를 비롯한 카테고리,드라마,회원가입 등의 버튼이 위치할 예정이며 뷰어 기준 세로 10%를 할당하게 해뒀습니다. */
 /* 회의를 통해 세로길이 조정해서 사용하시면 되겠습니다. */
 #header_S {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%; /*100vw;*/
     height: 10vh;
     grid-area: header;
@@ -28,7 +28,7 @@
 /* 회의를 거쳐 여백의 크기는 조정될 수 있으며 각 메인섹션들은 border를 보여주기 위해 임시로 뷰어 기준 가로 70%씩 할당하였습니다. */
 /* 실제 작업시 세개의 메인섹션들은 height 값을 조정하거나 없에고 작업하시면 되겠습니다. */
 #mainView_S {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%; /*100vw;*/
     grid-area: mainView;
     display: grid;
@@ -46,34 +46,32 @@
 }
 
 #section1_S {
-    width: 50%;
+    width: 70%;
     min-width: 1024px;/*07-24 최원석 수정*/
     height: 60vh;
     grid-area: sec1;
-    border: 1px solid red;
-    /* min-height: 760px;07-24 최원석 수정 */
-    
+    /* border: 1px solid red; */
 }
 #section1-5_S{
-    width: 100%;
-    height: 30vh;
+    width: 70%;
+    min-width: 1024px;/*07-25 최원석 수정*/
+    height: 29vh;
     grid-area: sec1-5;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #section2_S {
-    width: 70vw;
+    width: 70%;
     min-width: 1024px;/*07-24 최원석 수정*/
     /* height: 80vh; */
     height: 100vh; /*07-23 최원석 수정*/
     min-height: 1024px;/*07-24 최원석 수정*/
-
     grid-area: sec2;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     
 }
 /* 컨테이너 최하단 푸터 구역입니다 뷰어 기준 세로 30% 할당하였습니다, 컨텐츠의 양에 따라 수정하시면 됩니다*/
 #footer_S {
     width: 100%; /*100vw;*/
     height: 30vh;
-    border: 1px 0 solid red;
+    /* border: 1px 0 solid red; */
 }
