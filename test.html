@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body,html{
+            height: 100%;
+        }
+        .ratingCon{
+            height: 100%;
+            border: 1px solid red;
+        }
+        .ratingTop{
+            height: 10%;
+            border: 1px solid violet;
+        }
+        .ratingBottom{
+            height: 90%;
+            border: 1px solid blue;
+            display: flex;
+        }
+        .ratingItem{
+            height: 100%;
+            width: 20%;
+            display: flex;
+        }
+        .topIcons{
+            font-size: 2rem;
+        }
+
+        .ratingItemLeft{
+            width: 20%;
+            
+        }
+        .ratingItemRight{
+            width: 80%;
+        }
+        .ratingCon img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
+</head>
+<body>
+    <div class="ratingCon">
+        <div class="ratingTop">
+            YellowBox 오늘 탑5 영화
+        </div>
+        <div class="ratingBottom">
+            <div class="ratingItem">
+                <div class="ratingItemLeft">
+                    <span class="material-symbols-outlined topIcons">
+                        looks_one
+                    </span>
+                </div>
+                <div class="ratingItemRight">
+                    <img src="" alt="" class="ratingImg">
+                </div>
+            </div>
+            <div class="ratingItem">
+                <div class="ratingItemLeft">
+                    <span class="material-symbols-outlined topIcons">
+                        looks_two
+                    </span>
+                </div>
+                <div class="ratingItemRight">
+                    <img src="" alt="" class="ratingImg">
+                </div>
+            </div>
+            <div class="ratingItem">
+                <div class="ratingItemLeft">
+                    <span class="material-symbols-outlined topIcons">
+                        looks_3
+                    </span>
+                </div>
+                <div class="ratingItemRight">
+                    <img src="" alt="" class="ratingImg">
+                </div>
+            </div>
+            <div class="ratingItem">
+                <div class="ratingItemLeft">
+                    <span class="material-symbols-outlined topIcons">
+                        looks_4
+                    </span>
+                </div>
+                <div class="ratingItemRight">
+                    <img src="" alt="" class="ratingImg">
+                </div>
+            </div>
+            <div class="ratingItem">
+                <div class="ratingItemLeft">
+                    <span class="material-symbols-outlined topIcons">
+                        looks_5
+                    </span>
+                </div>
+                <div class="ratingItemRight">
+                    <img src="" alt="" class="ratingImg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+       
+    <script>
+        
+
+        function callTopMovie(){
+            return new Promise( resolve => {
+                let xhr = new XMLHttpRequest();
+                xhr.open('get' , './json/movielist2.json');
+                xhr.send();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        let arrMovieList2 = JSON.parse(xhr.response);
+                        resolve(arrMovieList2);
+                    }
+                }
+            } );
+        }
+
+        async function afterCallTopMovie(){
+            let arrMovie = await callTopMovie();
+            console.log(arrMovie);
+
+            arrMovie.sort(function(a, b){
+                if(a.open > b.open)
+                    return -1;
+                if(a.open == b.open)
+                    return 0;
+                if(a.open < b.open)
+                    return 1;
+            });
+            console.log(arrMovie);
+            
+            let ratingImg = document.querySelectorAll('.ratingImg');
+            
+            for(let i = 0; i < ratingImg.length; i++){
+                ratingImg[i].src = './img/' + arrMovie[i].img;
+            }
+        }
+
+        
+        window.onload = afterCallTopMovie();
+    </script>
+</body>
+</html>
