@@ -24,24 +24,19 @@ let email = document.getElementById('email');
                 return;
             }
 
-            let promise = new Promise((resolve, reject) => {
+            let promise = new Promise((resolve) => {
                 let xhr = new XMLHttpRequest();
                 xhr.open('get', './json/member.json');
                 xhr.send();
                 xhr.onreadystatechange = function () {
-
                     if (xhr.readyState == 4 && xhr.status == 200) {
-                        console.log('member.json 접속 성공');
                         let memberJson = JSON.parse(xhr.response);
                         resolve(memberJson);
-
                     }
                 }
             });
 
-
             promise.then((memberJson) => {
-                console.log(memberJson);
                 for (let i = 0; i < memberJson.length; i++) {
                     if (memberJson[i].email == email.value) {
                         if (memberJson[i].password == password.value) {
@@ -59,7 +54,5 @@ let email = document.getElementById('email');
                     }
                 }
                 emailSpan.innerHTML = '아이디가 없습니다.';
-            }).catch(() => {
             });
-            
         }
