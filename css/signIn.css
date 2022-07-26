@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'GmarketSans';
+    src: url(../font/GmarketSansTTF/GmarketSansTTFMedium.ttf) format('truetype');
+}
+
+:root{
+    --colorYellow : #f9d142;
+    --colorBlack : #292826;
+    --colorRed : red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSans'; 
+}
+#container_S {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+#background_S {
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    z-index: -1;
+    background-image: url("../img/loginBack_S.jpeg");
+    background-position: center;
+    background-size: cover;
+    filter:brightness(0.4);
+}
+
+#header_S {
+    width: 100%;
+    height: 10vh;
+    /* border: 1px solid red; */
+    grid-area: header;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), rgba(255,255,255, 0));
+}
+#headerLogo_S {
+    width: 15vw;
+    height: 10vh;
+    /* border: 1px solid red; */
+    display: inline-block;
+    justify-self: start;
+}
+#Logo_S {
+    width: 15vw;
+    height: 10vh;
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-top: 1vw;
+}
+
+#mainDiv_S {
+    width: 50%;
+    height: 100vh;
+    /* border: 1px solid red; */
+    grid-area: main;
+    justify-self: center;
+    padding: 5vh 5vw 5vh 5vw;
+    display: grid;
+}
+#viewDiv_S {
+    width: 500px;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    place-self: center;
+    padding: 60px;
+    display: grid;
+}
+#loginText_S {
+    color: #f9d142;
+    font-size: 2em;
+    display: block;
+    /* border: 1px solid red; */
+    margin: 20px 0;
+}
+#email {
+    width: 380px;
+    height: 50px;
+    font-size: 0.8em;
+    padding: 10px 0 10px 20px;
+    background-color: rgb(25, 26, 30);
+    color: white;
+    border: none;
+    border-radius:  10px;
+}
+
+#emial::placeholder {
+    color: rgb(90, 90, 90);
+}
+#email:focus{
+    outline: none;
+}
+#password {
+    width: 380px;
+    height: 50px;
+    font-size: 0.8em;
+    padding: 10px 0 10px 20px;
+    background-color: rgb(25, 26, 30);
+    color: white;
+    border: none;
+    border-radius:  10px;
+}
+
+#password::placeholder {
+    color: rgb(90, 90, 90);
+}
+#password:focus{
+    outline: none;
+}
+#viewFooter_S {
+    align-self: end;
+    
+}
+#submit {
+    width: 380px;
+    height: 50px;
+    background-color:#e1bd3d;
+    border-radius: 10px;
+    color: #292826;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0 0 0;
+}
+#submit:hover {
+    background-color:#f9d142;
+}
+.formSpans {
+    display: inline-block;
+    color: #f9d142;
+    font-size: 0.8rem;
+    margin: 10px 0 20px 5px;
+
+}
+#helper_S {
+    color: rgb(90, 90, 90);
+    font-size: 0.8em;
+    /* border: 1px solid red; */
+    margin: 15px 0 30px 0px;
+    display: inline-block;
+}
+#helper_S:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#signUp_S {
+    color: rgb(90, 90, 90);
+    font-size: 0.9em;
+}
+#signUpLink_S {
+    color: #f9d142;
+    font-size: 1em;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+}
+#helperLink_S:hover {
+    text-decoration: underline;
+}
+
+#footer_S {
+    width: 100%;
+    height: 30vh;
+    /* border: 1px solid red; */
+    grid-area: footer;
+}
+
+#footerFilter_S {
+    position: absolute;
+    width: 100%;
+    height: 140vh;
+    display: grid;
+    align-self: end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(0,0,0, 0.1) 50%);
+    z-index: -1;
+}
