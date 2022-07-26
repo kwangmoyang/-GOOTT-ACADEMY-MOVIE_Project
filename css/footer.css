@@ -1,0 +1,85 @@
+
+.footerContainer_K{
+    width: 70%;
+    height: 30vh;
+    /* display: flex; */
+    margin: auto;
+    color: #ababab;
+}
+/* 공지사항란 글씨 슬라이드 영역 */
+.textRolling_k{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    position: relative;
+    border: solid #d7d7d7; border-width: 1px 0;
+    /* border: 1px solid yellow; */
+}
+.notice_K{
+    width: 8vw; 
+    height: 7.5vh;
+    line-height: 8vh;
+    font-size: 1.3rem;
+    /* border: 1px solid red; */
+}
+.notice_K:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+.noticeSlide_K{
+    width: 30vw;
+    height: 7.5vh;
+    overflow: hidden;
+    /* border: 1px solid blue; */
+    /* cursor: pointer; */
+}
+.noticeSlide_K > ul{
+    list-style: none;
+    line-height: 8vh;
+    font-size: 1.2rem;
+}
+.noticeSlide_K > ul > li:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+/* 공지사항 오른쪽 로고 이미지 영역 */
+.noticeLogo_K{
+    width: 14vw;
+    height: 7.5vh;
+    position: absolute;
+    right: 0;
+    /* border: 1px solid blanchedalmond; */
+}
+.logo_k{
+    width: 3vw;
+    height: 3vh;
+    margin-top: 2vh;
+}
+/* 홈페이지 바닥글 영역 */
+.footerone_K{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+.footerone_K > ul{
+    list-style: none;
+}
+.footerone_K > ul > li{
+    float: left;
+    margin: 1vh 1.5vw 1vh 0;
+}
+.footerone_K > ul > li:hover{
+    color: #F9D142;
+    cursor: pointer;
+}
+.footertwo_K{
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    padding: 1.5vh 0 0 0;
+    font-size: 0.7rem;
+    line-height: 3vh;
+    /* border: 1px solid yellow; */
+}
+
