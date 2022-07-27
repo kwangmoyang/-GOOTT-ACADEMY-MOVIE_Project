@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <title>YELLOW BOX</title>
     <link rel="icon" href="./img/favicon.png">
     <link rel="stylesheet" href="./css/signInUp.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
+
 <body>
     <div id="containe_S">
         <div id="background_S"></div>
@@ -18,7 +21,8 @@
             </div>
             <div id="headerSignUp_S">
                 <div id="signUp_S">
-                    <a href="join.html" style="text-decoration: none; color: #292826;"><span>회원가입</span></a><!--07-22 23:37 최원석 수정-->
+                    <a href="join.html" style="text-decoration: none; color: #292826;"><span>회원가입</span></a>
+                    <!--07-22 23:37 최원석 수정-->
                 </div>
             </div>
         </div>
@@ -51,23 +55,58 @@
                 </div>
                 <!-- helper 페이지 생성 후 링크 연결 예정 -->
                 <!-- helper 페이지에 ID찾기, PW찾기, 회원가입 창 구현 예정입니다 -->
-                <div id="viewHelp_S">도움이 필요하신가요? &nbsp; <span  onclick="location.href='helper.html'"> 자주 찾는 질문</span></div>
+                <div id="viewHelp_S">도움이 필요하신가요? &nbsp; <span onclick="location.href='helper.html'"> 자주 찾는 질문</span>
+                </div>
             </div>
         </div>
-        <div id="footer_S"></div>
-        <!-- 푸터 디자인은 수진이 작업끝나면 받아서 적용시키겠습니다
-                siginIn,signUp,helper page 전체 동일 -->
+        <div id="footer_S">
+            <div class="footerContainer_K">
+                <div class="textRolling_k">
+                    <div class="notice_K">공지사항</div>
+                    <div class="noticeSlide_K">
+                        <ul>
+                            <li class="Slideone_K">YELLOW BOX 제대로 즐기기</li>
+                            <li class="Slidetwo_K">YELLOW BOX 제대로 즐기기</li>
+                            <!-- <li class="three_K">YELLOW BOX 제대로 즐기기 3</li> -->
+                        </ul>
+                    </div>
+                    <div class="noticeLogo_K">
+                        <ion-icon class="logoface_K" name="logo-facebook"></ion-icon>
+                        <ion-icon class="logoins_K" name="logo-instagram"></ion-icon>
+                        <ion-icon class="logotwi_K" name="logo-twitter"></ion-icon>
+                        <ion-icon class="logoyou_K" name="logo-youtube"></ion-icon>
+                    </div>
+                </div>
+                <div class="footerone_K">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>인재채용</li>
+                        <li>서비스 소개</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>고객센터</li>
+                    </ul>
+                </div>
+                <div class="footertwo_K">
+                    <p>옐로우박스 주식회사 | 대표이사 양광모 | 고객센터 2060-1428 (평일 09:30~18:30 / 점심시간 13:30~14:30 / 주말 및 공휴일 휴무) <br>
+                        이메일주소 : kwangmoyang@gmail.com <br>
+                        주소 : 서울시 구로구 시흥대로163길 33 2층 <br>
+                        사업자등록번호 : 111-22-33333 <br>
+                        Copyright© 옐로우박스(주) All rights reserved.</p>
+                </div>
+            </div>
+        </div>
         <div id="footerFilter_S"></div>
-    </div>
 
-    <script>
-        let test_C = document.querySelectorAll('#vsYB_S');
-        for(item of test_C){
-            item.addEventListener('click' , function(){
-                console.log(`${this.children[0].innerText} Click`);
-                location.href = 'signIn.html';
-            });
-        }
-    </script>
+        <script>
+            let test_C = document.querySelectorAll('#vsYB_S');
+            for (item of test_C) {
+                item.addEventListener('click', function () {
+                    console.log(`${this.children[0].innerText} Click`);
+                    location.href = 'signIn.html';
+                });
+            }
+        </script>
 </body>
+
 </html>
