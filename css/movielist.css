@@ -61,10 +61,13 @@
 }
 
 #genreSelect_C{
+  
     color: white;
     border: 1px solid white;
     margin-right: 1rem;
     background-color: transparent;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 #yearSelect_C{
@@ -72,6 +75,8 @@
     border: 1px solid white;
     margin-right: 1rem;
     background-color: transparent;
+    cursor: pointer;
+    border-radius: 6px;
 }
 
 #btnSelect_C{
@@ -145,11 +150,11 @@
 .moviesCover_C{
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #29282664;
-    
+    left: -25%;
+    width: 150%;
+    height: 70%;
+    background-color: #181716b2;
+    z-index: 10;
     opacity: 0;
     backdrop-filter: blur(5px);
     color: rgb(204, 204, 204);
@@ -157,7 +162,7 @@
     transition: .5s;
     padding: 1rem;
     font-size: 1.1rem;
-    
+    transform: scaleX(0);
 
 }
 
@@ -166,13 +171,14 @@
     background-color: transparent;
 }
 
-.movies_C:hover p{
+.movies_C:hover p:nth-child(3){
     transition: .5s;
-    color: coral;
+    color: var(--colorYellow);
 }
 
 .movies_C:hover .moviesCover_C{
     opacity: 1;
+    transform: scaleX(1);
 }
 
 .play_C{
@@ -180,6 +186,7 @@
     position: absolute;
     bottom: 1rem;
     left: 50%;
+    bottom: 2rem;
     transform: translateX(-50%);
     font-size: 3rem;
     background-color: transparent;
@@ -189,8 +196,8 @@
 }
 
 .play_C:hover{
-    color: crimson;
-    transform: translateX(-50%) scale(1.2,1.2);
+    color: rgb(198, 178, 103);
+    transform: translateX(-50%) scale(1.5,1.5);
 }
 
 
@@ -204,6 +211,7 @@
     justify-content: center;
     align-items: center; */
     height: 5%;
+    
 }
 
 #pageBtnContainer_C a{
@@ -224,6 +232,7 @@
     left: 50%; */
     /* transform: translate(-50%,-50%);  */
     display: none;
+    z-index: 99;
 
 }
 
@@ -244,7 +253,7 @@
     transform: scale(1.2,1.2);
 }
 
-#logoutBtn_C{
+/* #logoutBtn_C{
     display: inline-block;
     padding: 0.5rem;
     color: rgb(98, 98, 98);
@@ -253,7 +262,7 @@
     border: none;
     outline: none;
     
-}
+} */
 
 #manageBtn_C{
     display: inline-block;
@@ -267,10 +276,10 @@
     
 }
 
-#logoutBtn_C:hover{
+/* #logoutBtn_C:hover{
     color: crimson;
     
-}
+} */
 
 #manageBtn_C:hover{ /*관리자만 있는 회원관리 버튼. 기능은 미구현 예정*/
     color: rgb(162, 162, 162);
@@ -284,12 +293,13 @@
     top: 100%;
     right: 0;
     z-index: 99;
-    width: 400px;
+    width: 380px;
     height: 0;
     overflow: hidden;
     transition: .3s;
     color: white;
     font-size: 1rem;
+    /* background-color: rgb(44, 44, 44); */
     
     
     
@@ -328,27 +338,28 @@
 }
 #manageDiv_C td:nth-child(3n-1){
     padding: 0;
-    color: rgb(0, 0, 0);
+    color: rgb(211, 178, 70);
     
 }
 
 
 
 #loginID_C{/*07-23 최원석 추가*/
-    color: var(--colorYellow); 
+    color: rgb(165, 165, 165); 
     font-size: 1.5rem;
-    cursor: pointer;
+    margin-right: 0.5rem;
 }
 
 #loginText_C{
     color: white;
     font-size: 1rem;
-    margin-right: 1rem;
+    
 }
 
 #loginAuth_C{
-    color: orangered;
-    font-size: 1.2rem;
+    color: rgb(230, 230, 230);
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
 #loginPayment_C{
@@ -362,36 +373,37 @@
 }
 
 #userDiv_C{
-    display: flex;
-    flex-direction: column;
+    /* display: none; */
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 0;
+    left: 100%;
     z-index: 99;
-    height: 0;
-    overflow: hidden;
+    width: 280px;
     transition: .3s;
+    padding: 0.5rem;
+    background-color: rgb(31, 31, 31);
 }
 
-#loginID_C:hover ~ #userDiv_C{
-    height: 100px;
-}
-
-#userDiv_C:hover{
-    height: 100px;
+#userDiv_C div{
+    background-color: transparent;
 }
 
 #userDiv_C span{
     margin-left: 0.5rem;
+    background-color: transparent;
 }
 
 #userDiv_C span:nth-child(odd){
-   font-size: 1.4rem;
+   font-size: 1.1rem;
    color: rgb(112, 112, 112);
 }
 
 #userDiv_C span:nth-child(even){
     margin-right: 0.5rem;
+}
+
+#userDiv_C a{
+    background-color: transparent;
 }
 
 .chooseOption{
@@ -415,14 +427,15 @@
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
-    height: 10%;
+    height: 15%;
     margin: 0.5rem 0;
     background-color: rgb(25, 25, 25);
     /* border: 1px solid violet; */
     color: white;
     display: flex;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    
 }
 .ratingBottom{
     height: 80%;
@@ -466,7 +479,13 @@
     display: flex;
     height: 100%;
     align-items: center;
+    justify-content: center;
     background-color: rgb(25, 25, 25);
+}
+
+#divPage_C a{
+    background-color: transparent;
+    font-size: 1.3rem;
 }
 
 .numbers{
@@ -478,6 +497,7 @@
     color: rgb(229, 174, 185);
     cursor: pointer;
     transition: .3s;
+    margin-left: 0.5rem;
 }
 #coupon:hover{
     color: crimson;
