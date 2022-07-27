@@ -39,46 +39,49 @@
                 <div class="searchBox_P">
                     <div class="search_P">
                         <input class="searchTxt_P" type="text" placeholder="제목을 검색하세요.">
-                        <a class="searchBtn_P" href="">
-                            <ion-icon name="search-outline" id="sicon_P"></ion-icon>
-                        </a>
+                        <ion-icon name="search-outline" id="sicon_P"></ion-icon>
                     </div>
                 </div>
                 
+                <div class="login_P">
+                    <span id="loginID_C"></span>
+                    <span id="loginText_C">님 환영합니다.</span>
+                    
+                    <!-- <button id="logoutBtn_C">로그아웃</button> -->
+                    <button id="manageBtn_C">회원관리</button>
+                    <div id="manageDiv_C"></div>
+                </div>
                 <div class="dropdown_P">
                     <ion-icon name="person-circle-outline" class="loginicon_P" onclick="dp_menu()"></ion-icon>
                     <div style="display: none;" id="drop-content_P">
                         <ul class="drop-contentul_P">
-                            <li class="drop-contentli1_P"><a hreaf='#'>
-                                    <ion-icon name="settings-outline" class="dropicon_P"></ion-icon> 프로필 관리
-                                </a></li>
-                            <li class="drop-contentli2_P"><a hreaf='#'>
-                                    <ion-icon name="help-circle-outline" class="dropicon_P"></ion-icon> QnA
-                                </a></li>
-                            <li class="drop-contentli3_P"><a hreaf='#'>
-                                    <ion-icon name="exit-outline" class="dropicon_P"></ion-icon> 로그아웃
-                                </a></li>
+                            <li class="drop-contentli">
+                                <ion-icon name="settings-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="profile_C">프로필 관리</span>
+                                <div id="userDiv_C">
+                                    <div>
+                                        <span>등급 :</span><span id="loginAuth_C"></span>
+                                    </div>
+                                    <div>
+                                        <span>결제 기간 :</span><span id="loginPayment_C"></span>
+                                    </div>
+                                    <div>
+                                        <span>잔여 일수 :</span><span id="remainDays_C"></span>
+                                    </div>
+                                    <div>
+                                        <a id="coupon">쿠폰쓰기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="drop-contentli">
+                                <ion-icon name="help-circle-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="qna_P">QnA</span>
+                            </li>
+                            <li class="drop-contentli">
+                                <ion-icon name="exit-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="logoutBtn_C">로그아웃</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="login_P">
-                    <span id="loginID_C"></span>
-                    <span id="loginText_C">님 환영합니다.</span>
-                    <div id="userDiv_C">
-                        <div>
-                            <span>등급 :</span><span id="loginAuth_C"></span>
-                        </div>
-                        <div>
-                            <span>결제 기간 :</span><span id="loginPayment_C"></span>
-                        </div>
-                        <div>
-                            <span>잔여 일수 :</span><span id="remainDays_C"></span><a id="coupon">쿠폰쓰기</a>
-                        </div>
-                    </div>
-                    <button id="logoutBtn_C">로그아웃</button>
-                    <button id="manageBtn_C">회원관리</button>
-                    <div id="manageDiv_C"></div>
-                </div>
+                
 
             </header>
         </div>
@@ -87,25 +90,25 @@
                 <div class="mainImgCon_C">
                     <div class="mainImgDiv_C">
                         <div class="mainImgs_C">
-                            <img src="./img/portfolio-1.jpg" alt="" class="mainImg_C">
+                            <img src="" alt="" class="mainImg_C">
                             <div class="mainImgsInner_C">
                                 <h1></h1>
                             </div>
                         </div>
                         <div class="mainImgs_C">
-                            <img src="./img/portfolio-2.jpg" alt="" class="mainImg_C">
+                            <img src="" alt="" class="mainImg_C">
                             <div class="mainImgsInner_C">
                                 <h1></h1>
                             </div>
                         </div>
                         <div class="mainImgs_C">
-                            <img src="./img/portfolio-3.jpg" alt="" class="mainImg_C">
+                            <img src="" alt="" class="mainImg_C">
                             <div class="mainImgsInner_C">
                                 <h1></h1>
                             </div>
                         </div>
                         <div class="mainImgs_C">
-                            <img src="./img/portfolio-4.jpg" alt="" class="mainImg_C">
+                            <img src="" alt="" class="mainImg_C">
                             <div class="mainImgsInner_C">
                                 <h1></h1>
                             </div>
@@ -116,7 +119,7 @@
             <div id="section1-5_S" class="section_S">
                 <div class="ratingCon">
                     <div class="ratingTop">
-                        YELLOW BOX Top Rating Movies
+                        <span style="color: #f9d142; background-color: transparent;">YELLOW BOX</span>&nbsp;&nbsp;Top Rating Movies
                     </div>
                     <div class="ratingBottom">
                         <div class="ratingItem">

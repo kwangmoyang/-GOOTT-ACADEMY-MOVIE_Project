@@ -3,7 +3,7 @@ const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; //최소 8 자
 const emailPattern = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/; //이메일 
 const whiteSpacePattern = /\s/g; //공백
 
-let emailBtn = document.getElementById('emailBtn');//중복 이메일 검사 버튼
+
 let checkCurrent = document.getElementById('checkCurrent'); //5개 이벤트 처리 상태 확인 버튼(콘솔에 출력)
 
 let email = document.getElementById('email'); //이메일
@@ -19,6 +19,7 @@ let password2 = document.getElementById('password2'); //비밀번호 확인
 let password2Span = document.getElementById('password2Span');
 
 let submit = document.getElementById('submit');
+let emailDupSpan = document.getElementById('emailDupSpan');
 
 let isEmailDupCheck = false; //이메일 중복 처리 됬는가
 let isEmailCheck = false; //제대로된 이메일 형식인가
@@ -26,15 +27,15 @@ let isNickCheck = false; //이름을 입력하였는가
 let isPw1Check = false; //비밀번호가 8자 이상, 영문과 숫자가 조합되었는가
 let isPw2Check = false; //비밀번호2 가 비밀번호 1과 일치하는가
 
-checkCurrent.addEventListener('click', function () {
-    console.clear();
-    console.log(`isEmailDupCheck : ${isEmailDupCheck}`);
-    console.log(`isEmailCheck : ${isEmailCheck}`);
-    console.log(`isNickCheck : ${isNickCheck}`);
-    console.log(`isPw1Check : ${isPw1Check}`);
-    console.log(`isPw2Check : ${isPw2Check}`);
+// checkCurrent.addEventListener('click', function () {//상태 체크
+//     console.clear();
+//     console.log(`isEmailDupCheck : ${isEmailDupCheck}`);
+//     console.log(`isEmailCheck : ${isEmailCheck}`);
+//     console.log(`isNickCheck : ${isNickCheck}`);
+//     console.log(`isPw1Check : ${isPw1Check}`);
+//     console.log(`isPw2Check : ${isPw2Check}`);
 
-})
+// })
 
 email.addEventListener('keyup', function () {
     if (this.value.length == 0) {
@@ -57,7 +58,8 @@ email.addEventListener('keyup', function () {
         emailSpan.innerHTML = '심각한 에러 발생.';
         isEmailCheck = false;
     }
-    isEmailCheck ? this.nextElementSibling.style.opacity = '1' : this.nextElementSibling.style.opacity = '0';
+    emailDupSpan.innerHTML = '';
+    (isEmailCheck == true && isEmailDupCheck == true) ? this.nextElementSibling.style.opacity = '1' : this.nextElementSibling.style.opacity = '0';
 
 });
 
@@ -83,7 +85,7 @@ nickname.addEventListener('keyup', function () {
 
 password1.addEventListener('keyup', function () {
     if (this.value.length == 0) {
-        password1Span.innerHTML = '최소 8 자, 최소 하나의 문자 및 하나의 숫자';
+        password1Span.innerHTML = '최소 8자, 최소 하나의 문자 및 하나의 숫자가 필요합니다.';
         password2Span.innerHTML = '';
         isPw1Check = false;
     }
@@ -162,7 +164,8 @@ function checkForm() {
     }
 }
 
-emailBtn.addEventListener('click' , checkDupEmail ); //이메일 중복 체크 이벤트 리스너 등록
+
+email.addEventListener('blur' , checkDupEmail); //포커스 잃으면 중복 이메일 체크
 
 function getEmailJson(){
     return new Promise((resolve) => {
@@ -179,20 +182,31 @@ function getEmailJson(){
 };
 
 async function checkDupEmail(){
+    if(email.value.length == 0){
+        emailDupSpan.innerHTML = '이메일을 입력해 주세요.';
+        isEmailDupCheck = false;
+        return;
+    }
+
+    if(isEmailCheck == false){
+        isEmailDupCheck = false;
+        return false;
+    }
+        
     let returnEmailJson = await getEmailJson();
     for (let i = 0; i < returnEmailJson.length; i++) {
         if (returnEmailJson[i].email == email.value) {
-            alert('중복된 아이디 입니다.');
+            emailDupSpan.innerHTML = '중복된 아이디 입니다.';
             isEmailDupCheck = false;
             return;
         }
     }
-    alert('사용가능한 아이디 입니다.') //여기까지 왔다는 것은 중복된 아이디가 없다는 뜻
-    isEmailDupCheck = true;
-    emailBtn.innerHTML = 'Email 사용 가능';
-    emailBtn.style.pointerEvents = 'none';
-    email.style.color = 'orangered';
+    emailDupSpan.innerHTML = '사용가능한 아이디 입니다.';
+    email.nextElementSibling.style.opacity = '1'
     email.disabled = true;
+    // alert('사용가능한 아이디 입니다.') //여기까지 왔다는 것은 중복된 아이디가 없다는 뜻
+    isEmailDupCheck = true;
+   
 }
 
 // emailBtn.addEventListener('click', function () {

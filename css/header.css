@@ -1,16 +1,15 @@
 #header_P {
     /* border: 1px  red; */
     
+    /* min-width: 1700px; */
+    /* min-width: 1200px; */
     width: 100%;
     height: 10vh;
-    
 }
 
 header{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
     
 }
 
@@ -25,132 +24,190 @@ header li{
 
 /* 로고 */
 .logo_P{
-    width: 20%;
+    margin-left: 3rem;
+    width: 15%;
     height: 100%;
+    float: left;
     /* border: 1px solid black; */
 }
 .logo_P img{
-    margin-left : 20px;
-    /* margin-top: 10px; */
-    height : 80px; 
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+   
+   
 }
 
 
 /* 메뉴 */
 .menu_P{
     display:flex;
-    justify-content:left;
-    width: 20%;
+    align-items: center;
+    /* justify-content:left; */
+    /* width: 20%; */
+    /* border: 1px solid red; */
+    margin-left: 2rem;
+    float: left;
     height: 100%;
-    list-style: none;
-    padding-left:0;
+   
+    
     /* border: 1px solid orange; */
 }
 
 .menu_P li{
     display: inline-block;
-    margin: 30px 25px;
-    color: #F9D142;
+    /* margin: 30px 25px; */
+    /* color: #F9D142; */
     list-style: none;
 }
+.menu_P a:hover{
+   color: #F9D142;
+}
+
+.menu_P li:first-child{
+    margin-right: 1.5rem;
+}
 .category_P a{
-    color: #F9D142;
+    color: white;
     text-decoration : none;
+    transition: .3s;
 }
 
 .drama_P a{
-    color: #F9D142;  
+    color: white;
     text-decoration : none;  
+    transition: .3s;
 }
 
 
 /* 서치바 */
 .searchBox_P{
+    float:left;
     /* width:30%; */
     width: 20%; /*07-26 최원석 수정*/
+    margin-left: 28rem;
     height: 100%;
     display:flex;
+    align-items: center;
     /* border: 1px solid blue; */
 }
 .search_P {
     display:flex;
     justify-content: center;
-    width:100%;
-    height:55%;
-    margin-top:15px;
+    
+    height:50%;
+    /* margin-top:15px; */
     background: #292826;
-    border : 2px solid #F9D142;
-    border-radius: 10px;
+    border-bottom: 1px solid grey;
+    /* border-radius: 10px; */
+    position: relative;
+    width: 0;
+    transition: .5s;
 }
 .search_P>input {
-    width: 90%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
     border: none;
-    background : none;
-    border-radius: 10px;
-    padding: 10px 12px;
-    margin-top: 3px;
+    outline: none;
+    background-color: #25231e;
+    /* padding-left: 1rem; */
+    /* margin-top: 3px; */
     font-size: 16px;
+    color: white;
+    transition: .5s;
+    
 }
-.searchBtn_P{
-    width: 10%;
-    margin-top: 17px;
-    text-decoration : none;
-    color: #dfdfdf;
-    font-size:18px;  
+
+
+
+#sicon_P{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 50;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .3s;
 }
+
+
 
 /* 아이콘 드롭다운 */
 .dropdown_P{
+    float: right;
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     background-color:#292826;
-    width:15%;
+    /* width:15%; */
     height: 100%;
+    /* border: 3px solid red; */
     /* border: 1px solid violet; */
 }
 .loginicon_P{
-    margin-top: 15px;
-    padding: 10px 40px;
-    font-size:30px;
-    background-color:#292826;
+    /* margin-top: 15px;
+    padding: 10px 40px; */
+    font-size: 3rem;
+    
     color: #F9D142;
+    margin-right: 0.5rem;
+    cursor: pointer;
+
 }
 #drop-content_P{
     position: absolute;
+    top:75%;
+    left: 0;
     z-index: 1;
+    height: 80px;
 }
 #drop-content_P a{
     display:block;
     font-size: 20px;
     color: #F9D142;
     text-decoration: none;
-    margin: 5px 10px;
+    /* margin: 5px 10px; */
 
 }
 .drop-contentul_P{
     list-style : none;
-    background : #292826;
+    background-color : #F9D142;
     width:150px;
 }
-#drop-content_P>ul>li{
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid gray;
-    cursor: pointer;
-}
-#drop-content_P>ul>li>a{
-  color: #F9D142;
-  font-size:18px;
-}
+
+
 .dropicon_P{
-  color: #F9D142;
+  color: white;
+  background-color: transparent;
+  margin-right: 0.5rem;
 }
-.drop-contentli1_P:hover{background-color:#808080 }
-.drop-contentli2_P:hover{background-color:#808080 }
-.drop-contentli3_P:hover{background-color:#808080 }
+.drop-contentli{
+    padding-left: 1.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    height: 50px;
+    background-color: transparent;
+}
+.menus_P{
+    background-color: transparent;
+    transition: .3s;
+}
+.drop-contentli:hover .menus_P{
+    /* background-color:#d4d4d4  */
+    color: var(--colorBlack);
+}
+
 
 
 .login_P{
+    float: right;
     width: 20%;
     height: 100%;
     position: relative; /*07-24 최원석 수정*/

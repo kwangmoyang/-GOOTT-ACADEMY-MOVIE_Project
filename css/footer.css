@@ -121,7 +121,7 @@ css 효과 따로 부여함 */
 }
 .footerone_K > ul > li:hover{
     /* 마우스 오버시 트렌지션 효과 0725 */
-    transition: 3s;
+    transition: .3s;
     color: #F9D142;
     cursor: pointer;
 }
