@@ -86,8 +86,11 @@ coupon.addEventListener('click' , function(){ //쿠폰 앵커 클릭시 프롬�
         date.setMonth(date.getMonth() + 1);
         loginPayment_C.innerHTML = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
         localStorage.setItem('payment' , loginPayment_C.innerHTML );
+        alert('쿠폰을 사용합니다.');
         location.reload();
     }
+    else if(text.length == 0)
+        alert('쿠폰번호를 입력해주세요.');
     else{
         alert('존재하지 않는 쿠폰 번호 입니다.');
     }
@@ -472,9 +475,9 @@ function drawMovies(i) { //영화 그리는 함수
     poster.src = "./img/" + sortedJsonArray[i].img;
     let starNum = Math.floor((sortedJsonArray[i].grade) % 10); //평점 만큼 별 그리기
     for (let k = 0; k < starNum; k++)
-        divCover.innerHTML += '<ion-icon name="star" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
+        divCover.innerHTML += '<ion-icon name="star" style="color : #f9d142; background-color: transparent; font-size : 2rem;"></ion-icon>';
     if (sortedJsonArray[i].grade % 10 != 0)//소숫점은 반개짜리 별 그리기
-        divCover.innerHTML += '<ion-icon name="star-half" style="color : blue; background-color: transparent; font-size : 18px;"></ion-icon>';
+        divCover.innerHTML += '<ion-icon name="star-half" style="color : #f9d142; background-color: transparent; font-size : 2rem;"></ion-icon>';
     divCover.innerHTML += `<br><span>${sortedJsonArray[i].grade}</span>`;
     divCover.innerHTML += `<br><br>${sortedJsonArray[i].story}`;
     divCover.appendChild(playIcon);
