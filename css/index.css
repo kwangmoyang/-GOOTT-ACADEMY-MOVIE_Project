@@ -72,6 +72,7 @@ a{
     border: var(--border);
     border-radius: var(--border-radius);
     margin: 25px 15px;
+    cursor: pointer;
 }
 
 
@@ -148,6 +149,7 @@ a{
     line-height: 50px;
     margin-top: 20px;
     color: var(--bg2-color);
+    cursor: pointer;
 }
 /* 네번째 아이콘 각도 조절 */
 #icon_change_Y{
