@@ -6,9 +6,13 @@ let email = document.getElementById('email');
 
         email.addEventListener('keyup', function () {
             emailSpan.innerHTML = '';
+            
+            
         });
-        password.addEventListener('keyup', function () {
+        password.addEventListener('keyup', function (e) {
             password1Span.innerHTML = '';
+            if(e.key == 'Enter')
+                checkForm();
         });
 
         submit.addEventListener('click' , checkForm);
