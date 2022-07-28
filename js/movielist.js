@@ -15,7 +15,7 @@ let logoutBtn = document.getElementById('logoutBtn_C');//로그아웃 버튼
 let manageDiv_C = document.getElementById('manageDiv_C');//관리자 회원 목록 보여줄 디비전
 let section2_S = document.getElementById('section2_S');//메인 부분 디비전
 let coupon = document.getElementById('coupon');//쿠폰 처리 앵커
-let currentChooseOptionText = '일반'; //일반,날짜순,평점순 담는 변수, 처음엔 일반으로 초기화
+let currentChooseOptionText = '일반'; //일반,날짜순, 평점순 담는 변수, 처음엔 일반으로 초기화
 let genreSelectText = null; //장르 셀렉트 텍스트
 let yearSelectText = null; //년도 셀렉트 텍스트
 let sortedJsonArrayCount = null; //소팅된후 총 페이지수
@@ -58,6 +58,7 @@ function startPage() { //페이지 로딩시 실행해야 하는 함수
             alert('결재기간이 만료되었습니다. 결제후 이용해 주세요.');
             remainDays_C.innerHTML = '만료';
             section2_S.style.display = 'none';
+            
             /*여기에 쿠폰 이벤트 작성*/
         }
     }
@@ -69,6 +70,7 @@ function startPage() { //페이지 로딩시 실행해야 하는 함수
     //관리자 처리
     if (localStorageAuthority == '관리자') {
         manageBtn_C.style.display = 'inline-block';
+        coupon.style.display = 'none';
         showMemberJson();
     }
     else {
@@ -468,6 +470,7 @@ function drawMovies(i) { //영화 그리는 함수
     div.className = `movies${i} movies_C`; //영화 하나 디비전
     divCover.className = 'moviesCover_C'; //호버시 나타날 커버 디비전
     poster.className = 'poster_C'; //영화 소프터 나타낼 이미지 태그
+    poster.alt = '이미지 준비중..';
     title.innerHTML = sortedJsonArray[i].title; //최종 소팅된 배열중 전역변수로 넘어온 배열 그리기
     genre.innerHTML = sortedJsonArray[i].genre;
     open.innerHTML = sortedJsonArray[i].openFull;

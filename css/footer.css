@@ -142,6 +142,10 @@ css 효과 따로 부여함 */
 
     transform: translateY(60%);       
     }
+
+    50%{
+        color: var(--colorYellow);
+    }
     100% { 
 
     transform: translateY(-60%); 
