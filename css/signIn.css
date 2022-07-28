@@ -50,8 +50,8 @@
     justify-self: start;
 }
 #Logo_S {
-    width: 15vw;
-    height: 10vh;
+    width: 200px;
+    height: 80px;
     cursor: pointer;
     margin-left: 3vw;
     margin-top: 1vw;
@@ -102,6 +102,7 @@
 }
 #email:focus{
     outline: none;
+    background-color:rgb(42, 43, 49);
 }
 #password {
     width: 380px;
@@ -120,6 +121,7 @@
 }
 #password:focus{
     outline: none;
+    background-color:rgb(42, 43, 49);
 }
 #viewFooter_S {
     align-self: end;

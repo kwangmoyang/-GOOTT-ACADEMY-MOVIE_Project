@@ -24,61 +24,64 @@
     <div id="container_S">
         <div id="header_P">
             <header>
-
-                <div class="logo_P">
-                    <a href="index.html"><img src="./img/mainlogo_4.png" alt=""></a>
+                <div class="first">
+                    <div class="logo_P">
+                        <a href="index.html"><img src="./img/mainlogo_4.png" alt=""></a>
+                    </div>
+                
+                    <nav class="menu_P">
+                        <ul id="menuin_P">
+                            <li class="category_P"><a href="#section2_S">카테고리</a></li>
+                            <li class="drama_P"><a href="#section3_K">드라마</a></li>
+                        </ul>
+                    </nav>
                 </div>
-
-                <nav class="menu_P">
-                    <ul id="menuin_P">
-                        <li class="category_P"><a href="#section2_S">카테고리</a></li>
-                        <li class="drama_P"><a href="#section3_K">드라마</a></li>
-                    </ul>
-                </nav>
-
-                <div class="searchBox_P">
-                    <div class="search_P">
-                        <input class="searchTxt_P" type="text" placeholder="제목을 검색하세요.">
-                        <ion-icon name="search-outline" id="sicon_P"></ion-icon>
+                <div class="second">
+                    <div class="searchBox_P">
+                        <div class="search_P">
+                            <input class="searchTxt_P" type="text" placeholder="제목을 검색하세요.">
+                            <ion-icon name="search-outline" id="sicon_P"></ion-icon>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="login_P">
-                    <span id="loginID_C"></span>
-                    <span id="loginText_C">님 환영합니다.</span>
-                    
-                    <!-- <button id="logoutBtn_C">로그아웃</button> -->
-                    <button id="manageBtn_C">회원관리</button>
-                    <div id="manageDiv_C"></div>
-                </div>
-                <div class="dropdown_P">
-                    <ion-icon name="person-circle-outline" class="loginicon_P" onclick="dp_menu()"></ion-icon>
-                    <div style="display: none;" id="drop-content_P">
-                        <ul class="drop-contentul_P">
-                            <li class="drop-contentli">
-                                <ion-icon name="settings-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="profile_C">프로필 관리</span>
-                                <div id="userDiv_C">
-                                    <div>
-                                        <span>등급 :</span><span id="loginAuth_C"></span>
+                <div class="third">
+                    <div class="dropdown_P">
+                        <ion-icon name="person-circle-outline" class="loginicon_P" onclick="dp_menu()"></ion-icon>
+                        <div style="display: none;" id="drop-content_P">
+                            <ul class="drop-contentul_P">
+                                <li class="drop-contentli">
+                                    <ion-icon name="settings-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="profile_C">프로필 관리</span>
+                                    <div id="userDiv_C">
+                                        <div>
+                                            <span>등급 :</span><span id="loginAuth_C"></span>
+                                        </div>
+                                        <div>
+                                            <span>결제 기간 :</span><span id="loginPayment_C"></span>
+                                        </div>
+                                        <div>
+                                            <span>잔여 일수 :</span><span id="remainDays_C"></span>
+                                        </div>
+                                        <div>
+                                            <a id="coupon">쿠폰쓰기</a>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <span>결제 기간 :</span><span id="loginPayment_C"></span>
-                                    </div>
-                                    <div>
-                                        <span>잔여 일수 :</span><span id="remainDays_C"></span>
-                                    </div>
-                                    <div>
-                                        <a id="coupon">쿠폰쓰기</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="drop-contentli">
-                                <ion-icon name="help-circle-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="qna_P">QnA</span>
-                            </li>
-                            <li class="drop-contentli">
-                                <ion-icon name="exit-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="logoutBtn_C">로그아웃</span>
-                            </li>
-                        </ul>
+                                </li>
+                                <li class="drop-contentli">
+                                    <ion-icon name="help-circle-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="qna_P">QnA</span>
+                                </li>
+                                <li class="drop-contentli">
+                                    <ion-icon name="exit-outline" class="dropicon_P"></ion-icon> <span class="menus_P" id="logoutBtn_C">로그아웃</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="login_P">
+                        <span id="loginID_C"></span>
+                        <span id="loginText_C">님 환영합니다.</span>
+                        
+                        <!-- <button id="logoutBtn_C">로그아웃</button> -->
+                        <button id="manageBtn_C">회원관리</button>
+                        <div id="manageDiv_C"></div>
                     </div>
                 </div>
                 
@@ -356,7 +359,7 @@
                         <li>서비스 소개</li>
                         <li>이용약관</li>
                         <li>개인정보 처리방침</li>
-                        <li>고객센터</li>
+                        <li onclick="location.href='helper.html'">고객센터</li>
                     </ul>
                 </div>
                 <div class="footertwo_K">

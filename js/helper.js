@@ -1,7 +1,6 @@
 let btn = document.querySelectorAll('.btn_Y');
 let answer = document.querySelectorAll('.answer_Y');
 
-
 // 토글 스위치 변수
 let flag = false;
 

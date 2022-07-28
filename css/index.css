@@ -27,8 +27,6 @@ a{
 .header_Y{
     width: var(--width);
     height: 100px;
-
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,14 +38,20 @@ a{
 
 
 /* 헤더 버튼 설정 */
-.header_Y>button{
+.header_Y>div{
     background-color: var(--bg2-color);
     /* border: 3px solid red; */
     width: 100px;
     height: 40px;
     cursor: pointer;
-    border-radius: var(--border-radius);
+    border-radius: 5px;
     margin-right: 40px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    text-align: center;
+    line-height: 40px;
+    color: #292826;
 }
 /* 로고 사이즈 조절 */
 .header_Y>a>img{
@@ -69,6 +73,13 @@ a{
 .rightBar_Y>ul>li{
     width: 25px;
     height: 25px;
+    background-color: #f9d14261;
+    border: none;
+    border-radius: 3px;
+    margin: 15px 15px;
+    cursor: pointer;
+}
+#rightFirst_S {
     background-color: #F9D142;
     border: var(--border);
     border-radius: var(--border-radius);
@@ -97,8 +108,8 @@ a{
 /* 섹션별 이미지 삽입 */
 .one_Y{
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
       ), url(../img/section1.jpg);
 }
 
@@ -144,12 +155,19 @@ a{
     font-size: 20px;
     line-height: 60px;
 }
+.text-zone_Y>p>ion-icon:hover {
+    color:#F9D142;
+    /* color:#fdde6e; */
+}
 /* 아이콘 사이즈 조절 */
 .uil-arrow-circle-down_Y{
     font-size: 50px;
     line-height: 50px;
     margin-top: 20px;
-    color: var(--bg2-color);
+
+    color: #f9d1428e;
+    /* color: #F9D142; */
+
     cursor: pointer;
 }
 /* 네번째 아이콘 각도 조절 */
@@ -158,14 +176,16 @@ a{
 }
 
 /* 섹션버튼 */
-.text-zone_Y>button{
+.text-zone_Y>div{
     background-color: var(--bg2-color);
-    border: 0px;
+    border: none;
     width: 200px;
     height: 45px;
     cursor: pointer;
-    border: var(--border);
-    border-radius: var(--border-radius);
-
+    border-radius: 5px;
+    display: inline-block;
+    color: #292826;
+    line-height: 45px;
     margin-top: 30px;
+    font-weight: bold;
 }
