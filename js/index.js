@@ -12,9 +12,13 @@ let fourTop = section[3].offsetTop;
 let menu = document.querySelector('.header_Y');
 let scrollTop = window.scrollY;
 let menu2 = document.querySelector('.header');
+
+
+
 // 라이트바 애니메이션
 let right = document.querySelector('#rightBar_Y').children;
 console.log(right[0]);
+
 
 // 스크롤 애니메이션
 let flag = false;
@@ -83,10 +87,10 @@ scrollBtn[3].onclick = function () {
 
 // right bar BOX 이펙트 함수
 function color(effect,ele,ele2,ele3){
-    right[effect].style.background='var(--bg-color)';
-    right[effect].style.transition='.5s';
-    right[ele].style.background='var(--bg2-color)';
-    right[ele2].style.background='var(--bg2-color)';
-    right[ele3].style.background='var(--bg2-color)';
+    right[effect].style.background='#F9D142';
+    right[effect].style.transition='.3s';
+    right[ele].style.background='#f9d14261';
+    right[ele2].style.background='#f9d14261';
+    right[ele3].style.background='#f9d14261';
 }
 
