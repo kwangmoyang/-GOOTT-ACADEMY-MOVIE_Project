@@ -53,6 +53,7 @@ a{
     line-height: 40px;
     color: #292826;
 }
+/* 로고 사이즈 조절 */
 .header_Y>a>img{
     width: 200px;
     height: 80px;
