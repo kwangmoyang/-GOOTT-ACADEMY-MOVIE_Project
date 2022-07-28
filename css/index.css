@@ -80,6 +80,10 @@ a{
 }
 #rightFirst_S {
     background-color: #F9D142;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    margin: 25px 15px;
+    cursor: pointer;
 }
 
 
@@ -159,8 +163,10 @@ a{
     font-size: 50px;
     line-height: 50px;
     margin-top: 20px;
+
     color: #f9d1428e;
     /* color: #F9D142; */
+
     cursor: pointer;
 }
 /* 네번째 아이콘 각도 조절 */

@@ -108,7 +108,11 @@ password1.addEventListener('keyup', function () {
     isPw1Check ? this.nextElementSibling.style.opacity = '1' : this.nextElementSibling.style.opacity = '0';
 });
 
-password2.addEventListener('keyup', function () {
+password2.addEventListener('keyup', function (e) {
+    // if(e.key == 'Enter'){
+    //     checkForm();
+    //     return;
+    // }
     let pw1Text = password1.value;
     if (isPw1Check && (pw1Text == this.value)) {
         password2Span.innerHTML = '';
@@ -131,7 +135,7 @@ password2.addEventListener('keyup', function () {
         isPw2Check = false;
     }
     isPw2Check ? this.nextElementSibling.style.opacity = '1' : this.nextElementSibling.style.opacity = '0';
-})
+});
 
 function checkForm() {
     if (isEmailCheck == false) {

@@ -23,7 +23,8 @@ a{
 }
 body{
     background-color: var(--bg-color);
-    /* height: auto; */
+    height: 1000px;
+
 }
 
 
@@ -111,7 +112,7 @@ body{
 .answer_Y{
     display: none;
     color: whitesmoke;
-
+    
 }
 
 /* 질문 텍스트 조절 */
@@ -134,4 +135,9 @@ body{
 .iconBox_S {
     display: flex;
     align-content: center;
+
+.btn_Y{
+    transition: .5s;
+    width: 2rem;
+    height: 2rem;
 }
