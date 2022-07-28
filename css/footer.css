@@ -51,11 +51,11 @@
 
 /* 공지사항 옆 제목 슬라이드 키프레임 효과 영역 */
 .noticeSlide_K li.Slideone_K{
-    /* color: blue; */
+    color: #F9D142;
     animation: scroll-Up 3.5s linear infinite;
 }
 .noticeSlide_K li.Slidetwo_K{
-    /* color: red; */
+    color: #F9D142;
     animation: scroll-Up 3.5s linear infinite;
 }
 /* 공지사항 오른쪽 로고 이미지 div 영역 */

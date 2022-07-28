@@ -1,3 +1,7 @@
+body {
+    background-color: #292826;
+}
+
 /* 컨테이너입니다 크게 header,mainView,footer 세구역으로 나눴습니다. */
 #container_S {
     /* border: 1px solid red; */

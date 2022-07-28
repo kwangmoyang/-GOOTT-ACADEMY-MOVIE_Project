@@ -65,8 +65,8 @@
     display: grid;
 }
 #Logo_S {
-    width: 15vw;
-    height: 10vh;
+    width: 200px;
+    height: 80px;
     cursor: pointer;
     margin-left: 3vw;
     margin-top: 1vw;

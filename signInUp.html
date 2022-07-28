@@ -37,19 +37,20 @@
                 </div>
 
                 <!-- 아래 네개의 버튼은 불필요하므로 각 사이트 OPEN API 사용하지 않는 이상 따로 링크하지는 않을 예정입니다-->
-                <div class="viewStyle_S" id="vsNA_S" onclick="location.href='#'">
+                <!-- 0728 04:20 서승혁 온클릭 링크 추가-->
+                <div class="viewStyle_S" id="vsNA_S" onclick="location.href='https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com'">
                     <div id="naverIcon_S"><img src="./img/iconNaver.svg" alt=""></div>
                     <div id="naverText_S"><span>네이버로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsKA_S" onclick="location.href='#'">
+                <div class="viewStyle_S" id="vsKA_S" onclick="location.href='https://accounts.kakao.com/'">
                     <div id="kakaoIcon_S"><img src="./img/iconKakao.svg" alt=""></div>
                     <div id="kakaoText_S"><span>카카오로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsFB_S" onclick="location.href='#'">
+                <div class="viewStyle_S" id="vsFB_S" onclick="location.href='https://www.facebook.com/login'">
                     <div id="faceIcon_S"><img src="./img/iconFace.svg" alt=""></div>
                     <div id="faceText_S"><span>페이스북으로 시작하기</span></div>
                 </div>
-                <div class="viewStyle_S" id="vsAP_S" onclick="location.href='#'">
+                <div class="viewStyle_S" id="vsAP_S" onclick="location.href='https://appleid.apple.com/sign-in'">
                     <div id="appleIcon_S"><img src="./img/iconApple.svg" alt=""></div>
                     <div id="appleText_S"><span>Apple로 시작하기</span></div>
                 </div>
@@ -84,7 +85,7 @@
                         <li>서비스 소개</li>
                         <li>이용약관</li>
                         <li>개인정보 처리방침</li>
-                        <li>고객센터</li>
+                        <li onclick="location.href='helper.html'">고객센터</li>
                     </ul>
                 </div>
                 <div class="footertwo_K">
@@ -107,6 +108,8 @@
                 });
             }
         </script>
+    <script src="./js/footer.js"></script>
+
 </body>
 
 </html>
